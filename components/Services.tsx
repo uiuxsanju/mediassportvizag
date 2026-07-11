@@ -12,7 +12,7 @@ export default function Services() {
     <section id="services" className="py-22 pt-20 pb-20">
       <div className="mx-auto w-[92%] max-w-[1180px]">
         <SectionHead eyebrow="Our Services" title="Everything Your Brand Needs"
-          sub="From signboards to corporate gifts — add to cart and order directly on WhatsApp." />
+          sub="From signboards to corporate gifts — add to cart and enquire directly on WhatsApp." />
         <div className="grid gap-5 [grid-template-columns:repeat(auto-fill,minmax(255px,1fr))]">
           {services.map((s, i) => (
             <motion.article key={s.id}
@@ -24,10 +24,7 @@ export default function Services() {
                   className="object-cover group-hover:scale-105 transition duration-500" />
               </div>
               <div className="p-4">
-                <div className="flex items-start justify-between gap-2">
-                  <h3 className="font-heading font-bold">{s.name}</h3>
-                  <span className="text-xs font-bold bg-brand/25 px-2 py-1 rounded-full whitespace-nowrap">{s.unit}</span>
-                </div>
+                <h3 className="font-heading font-bold">{s.name}</h3>
                 <p className="text-sm text-neutral-500 mt-1 mb-3">{s.desc}</p>
                 <div className="flex gap-2">
                   <button onClick={() => add(s)}
