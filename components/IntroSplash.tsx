@@ -1,26 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function IntroSplash() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
-
-  useEffect(() => {
-    // Session lo already chusina user ki malli chupinchadu
-    const seen = sessionStorage.getItem("introSeen");
-    if (!seen) {
-      setShow(true);
-      document.body.style.overflow = "hidden";
-    }
-  }, []);
 
   const closeSplash = () => {
     setFadeOut(true);
-    sessionStorage.setItem("introSeen", "true");
     setTimeout(() => {
       setShow(false);
-      document.body.style.overflow = "";
     }, 600); // fade-out duration
   };
 
