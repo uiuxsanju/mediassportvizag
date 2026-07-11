@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart";
+import IntroSplash from "@/components/IntroSplash";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${inter.variable}`}>
+        <IntroSplash />
         <CartProvider>{children}</CartProvider>
         <script
           type="application/ld+json"
