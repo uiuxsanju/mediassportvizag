@@ -12,7 +12,6 @@ type CartCtx = {
   remove: (id: string) => void;
   setQty: (id: string, qty: number) => void;
   clear: () => void;
-  total: number;
   count: number;
   checkoutUrl: () => string;
 };
@@ -47,28 +46,19 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const clear = () => setItems([]);
 
-  const total = useMemo(
-    () => items.reduce((s, i) => s + i.service.price * i.qty, 0),
-    [items]
-  );
   const count = useMemo(() => items.reduce((s, i) => s + i.qty, 0), [items]);
 
   const checkoutUrl = () => {
     const lines = items
-      .map(
-        (i, n) =>
-          `${n + 1}. ${i.service.name} × ${i.qty} (${i.service.unit})`
-      )
+      .map((i, n) => `${n + 1}. ${i.service.name} × ${i.qty}`)
       .join("\n");
-    const msg = `Hi MEDIASPOT! 👋 I would like to order:\n\n${lines}\n\n*Estimated total:* ₹${total.toLocaleString(
-      "en-IN"
-    )}\n\nPlease confirm final quote & delivery details.`;
+    const msg = `Hi MEDIASPOT! 👋 I would like an enquiry for:\n\n${lines}\n\nPlease share pricing & delivery details.`;
     return waLink(msg);
   };
 
   return (
     <Ctx.Provider
-      value={{ items, open, setOpen, add, remove, setQty, clear, total, count, checkoutUrl }}
+      value={{ items, open, setOpen, add, remove, setQty, clear, count, checkoutUrl }}
     >
       {children}
     </Ctx.Provider>

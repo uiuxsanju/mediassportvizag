@@ -4,7 +4,7 @@ import { X, Trash2, Minus, Plus, MessageCircle } from "lucide-react";
 import { useCart } from "@/lib/cart";
 
 export default function CartDrawer() {
-  const { items, open, setOpen, remove, setQty, clear, total, checkoutUrl } = useCart();
+  const { items, open, setOpen, remove, setQty, clear, checkoutUrl } = useCart();
 
   return (
     <>
@@ -12,7 +12,7 @@ export default function CartDrawer() {
       <aside className={`fixed top-0 right-0 h-full w-full max-w-[400px] bg-white z-[70] shadow-lift flex flex-col transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"}`}
         aria-hidden={!open}>
         <div className="flex items-center justify-between p-5 bg-black text-brand">
-          <h3 className="font-heading font-bold text-lg">Your Order ({items.length})</h3>
+          <h3 className="font-heading font-bold text-lg">Your Enquiry ({items.length})</h3>
           <button onClick={() => setOpen(false)} aria-label="Close cart"
             className="w-9 h-9 rounded-full bg-brand text-black grid place-items-center">
             <X size={18} />
@@ -22,7 +22,7 @@ export default function CartDrawer() {
         <div className="flex-1 overflow-y-auto p-4 grid gap-3 content-start">
           {items.length === 0 && (
             <p className="text-neutral-400 text-sm text-center mt-10">
-              Cart is empty. Add services from the Services section to place a WhatsApp order.
+              Cart is empty. Add services from the Services section to send a WhatsApp enquiry.
             </p>
           )}
           {items.map((i) => (
@@ -32,7 +32,7 @@ export default function CartDrawer() {
               </div>
               <div className="flex-1 min-w-0">
                 <b className="font-heading text-sm block truncate">{i.service.name}</b>
-                <small className="text-neutral-500">{i.service.unit}</small>
+
                 <div className="flex items-center gap-2 mt-1.5">
                   <button onClick={() => setQty(i.service.id, i.qty - 1)} aria-label="Decrease"
                     className="w-6 h-6 rounded-full bg-black/5 grid place-items-center"><Minus size={12} /></button>
@@ -42,28 +42,23 @@ export default function CartDrawer() {
                 </div>
               </div>
               <div className="text-right">
-                <b className="text-sm block">₹{(i.service.price * i.qty).toLocaleString("en-IN")}</b>
                 <button onClick={() => remove(i.service.id)} aria-label={`Remove ${i.service.name}`}
-                  className="text-red-500 mt-1"><Trash2 size={15} /></button>
+                  className="text-red-500"><Trash2 size={15} /></button>
               </div>
             </div>
           ))}
         </div>
 
         <div className="p-5 border-t border-black/10 grid gap-3">
-          <div className="flex justify-between font-heading font-bold">
-            <span>Estimated Total</span>
-            <span>₹{total.toLocaleString("en-IN")}</span>
-          </div>
-          <p className="text-[0.7rem] text-neutral-400 -mt-2">
-            * Indicative starting prices. Final quote confirmed on WhatsApp based on size & design.
+          <p className="text-[0.7rem] text-neutral-400">
+            * Pricing shared on WhatsApp based on size, material & design.
           </p>
           <a href={items.length ? checkoutUrl() : undefined} target="_blank" rel="noopener noreferrer"
             onClick={(e) => { if (!items.length) e.preventDefault(); }}
             className={`inline-flex items-center justify-center gap-2 font-heading font-bold py-3.5 rounded-full transition ${
               items.length ? "bg-[#25D366] text-white hover:brightness-110" : "bg-black/10 text-black/30 cursor-not-allowed"
             }`}>
-            <MessageCircle size={18} /> Order on WhatsApp
+            <MessageCircle size={18} /> Enquire on WhatsApp
           </a>
           {items.length > 0 && (
             <button onClick={clear} className="text-sm text-neutral-400 hover:text-red-500 transition">Clear cart</button>
