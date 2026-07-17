@@ -17,7 +17,7 @@ export const services: Service[] = [
   { id: "acp-board", name: "ACP Boards", desc: "Premium aluminium composite boards for modern storefronts.", img: "/photo/acp.webp" },
   { id: "glow-board", name: "Glow Sign Boards", desc: "Bright backlit boards visible day & night.", img: "/photo/leds.webp" },
   { id: "led-board", name: "LED Boards", desc: "Energy-efficient LED displays with high visibility.", img: "/photo/lednew.webp" },
-  { id:"moden-caps", name: "caps", desc: "style caps,evnts,collage evnets,parts.", img: "/photo/capss.webp" },
+  { id:"moden-Caps", name: "Caps", desc: "style caps,evnts,collage evnets,parts.", img: "/photo/capss.webp" },
   { id: "3d-acrylic", name: "3D Acrylic Letters", desc: "Elegant raised acrylic lettering with LED options.", img: "/photo/3d.webp" },
   { id: "ss-letters", name: "SS Letters", desc: "Stainless steel letters — mirror & matte finish.", img: "/photo/ssbords.webp" },
   { id: "gold-letters", name: "Gold Letters", desc: "Luxury gold-finish lettering for high-end brands.", img: "/photo/gold_bord.webp" },
