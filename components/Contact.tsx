@@ -5,7 +5,7 @@ import SectionHead from "./SectionHead";
 import { PHONE, waLink } from "@/lib/data";
 
 const info = [
-  { icon: MapPin, t: "Address", d: "MEDIASPOT – Advertising Hub, Main Road, Visakhapatnam, Andhra Pradesh" },
+  { icon: MapPin, t: "Address", d: "MEDIASPOT – Day and night hospital road, Rama Talkies Rd, Srinagar, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016" },
   { icon: Phone, t: "Phone", d: "+91 9133910782" },
   { icon: Mail, t: "Email", d: "mediaspot.ads@gmail.com" },
   { icon: Clock, t: "Working Hours", d: "Mon – Sat · 9:30 AM – 8:30 PM" },
@@ -48,9 +48,18 @@ export default function Contact() {
                 loading="lazy"
                 className="w-full h-[230px] border-0 block"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Visakhapatnam,Andhra+Pradesh&output=embed"
+                src="https://maps.google.com/maps?q=17.7287507,83.3085606&z=16&output=embed"
               />
             </div>
+
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=17.7287507,83.3085606"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-block px-5 py-2.5 rounded-full font-semibold text-sm bg-brand border border-brand hover:opacity-90 transition"
+            >
+              Get Directions
+            </a>
           </div>
 
           <div className="bg-white border border-black/10 rounded-2xl p-7 shadow-soft grid gap-4 content-start">
