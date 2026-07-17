@@ -17,6 +17,7 @@ export const services: Service[] = [
   { id: "acp-board", name: "ACP Boards", desc: "Premium aluminium composite boards for modern storefronts.", img: "/photo/acp.webp" },
   { id: "glow-board", name: "Glow Sign Boards", desc: "Bright backlit boards visible day & night.", img: "/photo/ledsignwebp.webp" },
   { id: "led-board", name: "LED Boards", desc: "Energy-efficient LED displays with high visibility.", img: "/photo/lednew.webp" },
+  { id:"moden-caps", name: "caps", desc: "style caps,evnts,collage evnets,parts.", img: "/photo/capss.webp" },
   { id: "3d-acrylic", name: "3D Acrylic Letters", desc: "Elegant raised acrylic lettering with LED options.", img: "/photo/3d.webp" },
   { id: "ss-letters", name: "SS Letters", desc: "Stainless steel letters — mirror & matte finish.", img: "/photo/ssbords.webp" },
   { id: "gold-letters", name: "Gold Letters", desc: "Luxury gold-finish lettering for high-end brands.", img: "/photo/gold_bord.webp" },
@@ -61,7 +62,7 @@ export const portfolio = [
   { title: "Café Wall Graphics", cat: "Branding", img: "/portfolio/graphic.webp" },
   { title: "Showroom SS Backlit Letters", cat: "3D Letters", img: "/portfolio/shoping.webp" },
   { title: "Crystal Awards — Annual Meet", cat: "Corporate Gifts", img: "/portfolio/awww.webp" },
-  { title: "Customised Mugs", cat: "Retail Branding", img: "/portfolio/customisedmugs.webp" },
+  { title: "Customised Mugs", cat: "Retail Branding", img: "/portfolio/mug.webp" },
 ];
 
 export const testimonials = [
