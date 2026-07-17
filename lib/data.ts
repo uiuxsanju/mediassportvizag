@@ -15,7 +15,7 @@ export type Service = {
 export const services: Service[] = [
   { id: "sign-board", name: "Sign Boards", desc: "Durable flex & board signage that gets your shop noticed.", img: "/photo/sign.webp" },
   { id: "acp-board", name: "ACP Boards", desc: "Premium aluminium composite boards for modern storefronts.", img: "/photo/acp.webp" },
-  { id: "glow-board", name: "Glow Sign Boards", desc: "Bright backlit boards visible day & night.", img: "/photo/leds.webp" },
+  { id: "glow-board", name: "Glow Sign Boards", desc: "Bright backlit boards visible day & night.", img: "/photo/ledsignwebp.webp" },
   { id: "led-board", name: "LED Boards", desc: "Energy-efficient LED displays with high visibility.", img: "/photo/lednew.webp" },
   { id:"moden-Caps", name: "Caps", desc: "style caps,evnts,collage evnets,parts.", img: "/photo/capss.webp" },
   { id: "3d-acrylic", name: "3D Acrylic Letters", desc: "Elegant raised acrylic lettering with LED options.", img: "/photo/3d.webp" },
