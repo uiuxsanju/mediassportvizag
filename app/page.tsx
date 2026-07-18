@@ -6,6 +6,7 @@ import WhyUs from "@/components/WhyUs";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
+import Memberships from "@/components/Memberships";
 import CtaBanner from "@/components/CtaBanner";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
       <Process />
       <Testimonials />
       <About />
+      <Memberships />
       <CtaBanner />
       <Contact />
       <Footer />
