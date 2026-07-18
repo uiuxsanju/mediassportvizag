@@ -1,0 +1,12 @@
+  keychains: [
+    P("Heart Photo Keychain", 199, "/products/keychains/heart-couple-photo-keychain.webp"),
+    P("Heart Family Photo Keychain", 199, "/products/keychains/heart-family-pet-keychain.webp"),
+    P("Custom Shape Keychain", 249, "/products/keychains/jersey-shape-keychain.webp"),
+    P("Printed Strap Keychain", 99, "/products/keychains/wanderlust-strap-keychain.webp"),
+    P("Motivational Strap Keychain", 99, "/products/keychains/motivational-strap-keychain.webp"),
+    P("Wooden Photo Keychain", 249),
+    P("Acrylic Name Keychain", 179),
+    P("Round Photo Keychain", 179),
+    P("Metal Engraved Keychain", 299),
+    P("Bulk Event Keychains (25+)", 89),
+  ],
