@@ -1,13 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, Phone, Lightbulb, Type, Gift } from "lucide-react";
+import { ArrowRight, Phone, Lightbulb, Type, Gift, Sparkles } from "lucide-react";
 import { PHONE } from "@/lib/data";
 
 const cards = [
   { icon: Lightbulb, title: "Premium Sign Boards", sub: "ACP · Glow · LED · Flex" },
   { icon: Type, title: "3D Acrylic & SS Letters", sub: "Gold · PVC · Backlit" },
   { icon: Gift, title: "Corporate Gifts & Awards", sub: "Frames · Trophies · Clocks" },
+  { icon: Sparkles, title: "Printing & Gifting & Advertising", sub: "Photo Frames · Keychains" },
 ];
 
 export default function Hero() {
@@ -28,9 +29,9 @@ export default function Hero() {
             Creative Branding & Advertising Solutions
           </h2>
           <p className="text-neutral-300 max-w-[560px] text-[0.97rem]">
-            Sign Boards | Inshop Branding | 3D Letters | SS Letters | PVC Letters | Gold
-            Letters | Customized Gifts | Photo Frames | Awards | Vinyl Pasting | Corporate
-            Branding — Delivering All Over India.
+            Sign Boards | LED Light Frames | 3D Letters | SS Letters | Caricature Standees | Gold
+            Letters | Key Chains | Photo Frames | Awards | Vinyl Pasting | Corporate
+            Gifts — Delivering All Over India.
           </p>
           <div className="flex flex-wrap gap-4 mt-8">
             <a href="#contact" className="inline-flex items-center gap-2 bg-brand text-black font-heading font-bold px-7 py-3.5 rounded-full hover:bg-white transition hover:-translate-y-0.5">
@@ -49,7 +50,7 @@ export default function Hero() {
           </motion.div>
           {cards.map((c, i) => (
             <motion.div key={c.title} initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.35 + i * 0.15 }}
-              className={`bg-white/5 border border-brand/40 rounded-2xl p-4 backdrop-blur flex items-center gap-4 ${i === 1 ? "ml-8" : ""}`}>
+              className="bg-white/5 border border-brand/40 rounded-2xl p-4 backdrop-blur flex items-center gap-4">
               <span className="w-13 h-13 p-3 rounded-xl bg-brand text-black grid place-items-center shrink-0">
                 <c.icon size={24} />
               </span>

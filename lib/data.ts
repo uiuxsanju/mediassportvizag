@@ -20,29 +20,25 @@ export type Product = {
 
 // ─────────────────────────────────────────────────────────────
 // SERVICES (Categories) — /public/services/ lo webp images
-// ─────────────────────────────────────────────────────────────
+// ────────────────────────────────────────────────────────
 export const services: Service[] = [
   { id: "sign-board", name: "Sign Boards", desc: "Durable flex & board signage that gets your shop noticed.", img: "/services/sign-board.webp", price: 3500, unit: "from ₹3,500" },
-  
   { id: "acp-board", name: "ACP Boards", desc: "Premium aluminium composite boards for modern storefronts.", img: "/services/acp-board.webp", price: 8000, unit: "from ₹8,000" },
-  { id: "glow-board", name: "Glow Sign Boards", desc: "Bright backlit boards visible day & night.", img: "/services/glow-board.webp", price: 6500, unit: "from ₹6,500" },
-  { id: "led-board", name: "LED Boards", desc: "Energy-efficient LED displays with high visibility.", img: "/services/led-board.webp", price: 9000, unit: "from ₹9,000" },
+  { id: "vehicle-wraps", name: "Vehicle Branding", desc: "Custom vinyl wraps for vans, trucks & fleet vehicles.", img: "/services/vehicle-wraps.webp", price: 4999, unit: "from ₹4,999" },
   { id: "3d-acrylic", name: "3D Acrylic Letters", desc: "Elegant raised acrylic lettering with LED options.", img: "/services/3d-acrylic.webp", price: 450, unit: "₹450 / letter" },
   { id: "ss-letters", name: "SS Letters", desc: "Stainless steel letters — mirror & matte finish.", img: "/services/ss-letters.webp", price: 550, unit: "₹550 / letter" },
-  { id: "gold-letters", name: "Gold Letters", desc: "Luxury gold-finish lettering for high-end brands.", img: "/services/gold-letters.webp", price: 700, unit: "₹700 / letter" },
-{ id: "caricature", name: "Caricature Standees", desc: "Personalized cartoon-style photo standees & gifts.", img: "/products/caricature/couple-love-caricature.webp", price: 599, unit: "from ₹599" },  { id: "vinyl", name: "Vinyl Pasting", desc: "High-quality vinyl prints for walls, glass & vehicles.", img: "/services/vinyl.webp", price: 45, unit: "₹45 / sq.ft" },
-{ id: "led-frames", name: "LED Light Frames", desc: "Personalized acrylic LED photo frames & night lamps.", img: "/products/led-frames/led-couple-portrait-frame.webp", price: 999, unit: "from ₹999" },  { id: "glass", name: "Glass Branding", desc: "Frosted & printed glass films for offices.", img: "/services/glass.webp", price: 55, unit: "₹55 / sq.ft" },
-  { id: "wall-graphics", name: "Wall Graphics", desc: "Custom wall wraps that transform your space.", img: "/services/wall-graphics.webp", price: 60, unit: "₹60 / sq.ft" },
-{ id: "frames", name: "Photo Frames", desc: "Customized photo frames for gifts & décor.", img: "/services/frames.webp", price: 499, unit: "from ₹499" },  { id: "corp-gifts", name: "Corporate Gifts", desc: "Branded gifts your clients will remember.", img: "/services/corp-gifts.webp", price: 299, unit: "from ₹299" },
-{ id: "keychains", name: "Key Chains", desc: "Custom photo & branded keychains.", img: "/products/keychains/heart-couple-photo-keychain.webp", price: 99, unit: "from ₹99" },  { id: "biz-cards", name: "Business Cards", desc: "Premium visiting cards with modern finishes.", img: "/services/biz-cards.webp", price: 350, unit: "₹350 / 100 pcs" },
-{ id: "invitations", name: "Customized Invitations", desc: "Designer invitations for every occasion.", img: "/products/invitations/floral-photo-invitation.webp", price: 25, unit: "from ₹25 / pc" },  { id: "awards", name: "Awards & Trophies", desc: "Acrylic, crystal & metal awards, engraved.", img: "/services/awards.webp", price: 650, unit: "from ₹650" },
-  { id: "clocks", name: "Acrylic Clocks", desc: "Personalized acrylic wall clocks.", img: "/services/clocks.webp", price: 899, unit: "from ₹899" },
-  { id: "bottles", name: "Corporate Bottles", desc: "Custom-branded bottles & drinkware.", img: "/services/bottles.webp", price: 349, unit: "from ₹349" },
-  { id: "wedding-gifts", name: "Wedding Gifts", desc: "Memorable customized wedding return gifts.", img: "/services/wedding-gifts.webp", price: 199, unit: "from ₹199" },
-  { id: "biz-cards", name: "Business Cards", desc: "Premium visiting cards with modern finishes.", img: "/products/biz-cards/car-shape-card-closed.webp", price: 350, unit: "₹350 / 100 pcs" },
-  { id: "id-cards", name: "ID Cards", desc: "Corporate, school & event ID cards with lanyards.", img: "/services/id-cards.webp", price: 99, unit: "from ₹99" },
+  { id: "trophies", name: "Trophies & Awards", desc: "Custom engraved trophies & recognition awards.", img: "/services/trophies.webp", price: 499, unit: "from ₹499" },
+  { id: "caricature", name: "Caricature Standees", desc: "Personalized cartoon-style photo standees & gifts.", img: "/services/caricature.webp", price: 599, unit: "from ₹599" },
+  { id: "led-frames", name: "LED Light Frames", desc: "Personalized acrylic LED photo frames & night lamps.", img: "/services/led.webp", price: 999, unit: "from ₹999" },
+  { id: "frames", name: "Photo Frames", desc: "Customized photo frames for gifts & décor.", img: "/services/frames.webp", price: 499, unit: "from ₹499" },
+  { id: "keychains", name: "Key Chains", desc: "Custom photo & branded keychains.", img: "/services/heart-couple-photo-keychain.webp", price: 99, unit: "from ₹99" },
+  { id: "biz-cards", name: "Business Cards", desc: "Custom shape business cards — unique & memorable.", img: "/services/biz-cards.webp", price: 349, unit: "from ₹349" },
+  { id: "visiting-cards", name: "Visiting Cards", desc: "Premium printed & designed visiting cards.", img: "/services/visiting-cards.webp", price: 299, unit: "from ₹299" },
+  { id: "invitations", name: "Customized Invitations", desc: "Designer invitations for every occasion.", img: "/services/invitations.webp", price: 25, unit: "from ₹25 / pc" },
+  { id: "caps", name: "Caps", desc: "Custom embroidered & printed branded caps.", img: "/services/caps.webp", price: 149, unit: "from ₹149" },
+  { id: "mugs", name: "Custom Mugs", desc: "Branded & personalized printed mugs for corporate gifting.", img: "/services/mugs.webp", price: 149, unit: "from ₹149" },
+  { id: "id-cards", name: "ID Cards", desc: "Co  rporate, school & event ID cards with lanyards.", img: "/services/id-cards.webp", price: 99, unit: "from ₹99" },
 ];
-
 // ─────────────────────────────────────────────────────────────
 // PRODUCTS — prathi category ki 10 products.
 // img ivvakapothe category image chupistundi.
@@ -53,23 +49,37 @@ const P = (name: string, price: number, img?: string): Product => ({ name, price
 
 export const products: Record<string, Product[]> = {
   "sign-board": [
-    P("Flex Sign Board", 3500), P("Vinyl Pasting Board", 4000), P("Non-Lit Box Board", 4500),
-    P("Lollipop Stand Board", 5500), P("Backlit Flex Board", 6000), P("Retro Fit Board", 5000),
-    P("Directional Sign Board", 2500), P("Hanging Shop Board", 3800), P("One-Way Vision Board", 4200),
-    P("Clip-On Poster Frame", 1800),
-  ],
+  P("LED Storefront Sign", 4500, "/products/sign-board/signboard-led-travel-agency.webp"),
+  P("LED Shop Nameboard", 3500, "/products/sign-board/signboard-led-tea-shop.webp"),
+  P("Backlit Wall Signage", 6500, "/products/sign-board/signboard-backlit-hospital.webp"),
+  P("Multi-Brand LED Facade", 9999, "/products/sign-board/signboard-led-brand-facade.webp"),
+],
   "acp-board": [
-    P("ACP Front Elevation", 8000), P("ACP with 3D Letters", 12000), P("ACP Backlit Panel", 14000),
-    P("ACP + LED Combo", 16000), P("ACP Reception Wall", 18000), P("ACP Pylon Board", 25000),
-    P("ACP Canopy Fascia", 15000), P("Wooden-Finish ACP", 11000), P("ACP Punch Letters", 13000),
-    P("ACP Full Storefront", 30000),
-  ],
-  "glow-board": [
-    P("LED Glow Board", 6500), P("Flex Glow Board", 7000), P("Acrylic Glow Board", 9000),
-    P("Double-Side Glow Board", 11000), P("Round Glow Lollipop", 8500), P("Edge-Lit Glow Board", 9500),
-    P("Glow with 3D Letters", 12000), P("Backlit Fabric Board", 10000), P("Menu Glow Board", 5500),
-    P("Slim Glow Light Box", 7500),
-  ],
+  P("ACP Storefront Cladding", 8000, "/products/acp-board/acp-storefront-orange-smartbox.webp"),
+  P("Two-Storey ACP Facade", 15999, "/products/acp-board/acp-storefront-orange-container.webp"),
+  P("3D Letter Signboard on ACP", 9999, "/products/acp-board/acp-facade-black-guptasweets.webp"),
+  P("Backlit ACP Brand Facade", 11999, "/products/acp-board/acp-facade-black-timhortons.webp"),
+  P("Printed ACP Storefront Panel", 8500, "/products/acp-board/acp-facade-yellow-burgerstore.webp"),
+  P("Backlit Circular Logo ACP", 9500, "/products/acp-board/acp-facade-grey-bcoffee.webp"),
+  P("Premium Marble-Finish ACP", 13999, "/products/acp-board/acp-facade-marble-bottega.webp"),
+],
+
+  "vehicle-wraps": [
+  P("Delivery Van Full Wrap", 12999, "/products/vehicle-wraps/vanwrap-navy-mamma8.webp"),
+  P("Business Van Wrap", 9999, "/products/vehicle-wraps/vanwrap-purple-petshop.webp"),
+  P("Tourist Van Branding", 11999, "/products/vehicle-wraps/vanwrap-blue-komfortour.webp"),
+  P("Food Truck Full Wrap", 14999, "/products/vehicle-wraps/vanwrap-green-mito-chips.webp"),
+  P("Delivery Truck Wrap", 13999, "/products/vehicle-wraps/vanwrap-pink-bakery.webp"),
+  P("Fleet Truck Branding (Set)", 24999, "/products/vehicle-wraps/vanwrap-green-dairy-sangare.webp"),
+  P("Brand Van Wrap", 10999, "/products/vehicle-wraps/vanwrap-yellow-lays.webp"),
+  P("Travel Van Branding", 11499, "/products/vehicle-wraps/vanwrap-green-fittravel.webp"),
+  P("Logistics Van Wrap", 10999, "/products/vehicle-wraps/vanwrap-orange-bold-logistics.webp"),
+  P("Food Industry Van Wrap", 12499, "/products/vehicle-wraps/vanwrap-red-giovanni-food.webp"),
+  P("Clinic Fleet Wrap (Pair)", 15999, "/products/vehicle-wraps/vanwrap-white-goodwill-clinic.webp"),
+  P("Pet Shop Van Wrap", 9499, "/products/vehicle-wraps/vanwrap-white-petshop-brown.webp"),
+  P("Restaurant Van Wrap", 10999, "/products/vehicle-wraps/vanwrap-red-sabanero.webp"),
+],
+  
   "led-board": [
     P("LED Scrolling Display", 9000), P("P10 LED Board", 12000), P("RGB Pixel Board", 15000),
     P("LED Open Sign", 4500), P("LED Name Board", 8000), P("Neon Flex Sign", 7500),
@@ -84,17 +94,31 @@ export const products: Record<string, Product[]> = {
     P("Collage Frame", 1199, "/products/frames/collage-frame.webp"),
     P("Mosaic Photo Frame", 1299, "/products/frames/mosaic-photo-frame.webp"),
   ],
+  "visiting-cards": [
+  P("Minimal Logo Card", 299, "/products/visiting-cards/bizcard-green-geometric-logo.webp"),
+  P("Bold Color Card", 349, "/products/visiting-cards/bizcard-orange-blue-algor.webp"),
+  P("Gradient Brand Card", 349, "/products/visiting-cards/bizcard-purple-poddit.webp"),
+  P("Dual-Tone Premium Card", 399, "/products/visiting-cards/bizcard-yellow-green-milaq.webp"),
+  P("Matte Finish QR Card", 449, "/products/visiting-cards/bizcard-neon-black-forterunners.webp"),
+  P("Neon Edge Card", 399, "/products/visiting-cards/bizcard-yellow-black-suntwin.webp"),
+  P("Corporate Two-Sided Card", 349, "/products/visiting-cards/bizcard-blue-white-kretos.webp"),
+],
+  mugs: [
+  P("Corporate Logo Mug", 199, "/products/mugs/mug-corporate-black-logo.webp"),
+  P("Branded Color Mug", 179, "/products/mugs/mug-branded-pink-gofans.webp"),
+  P("Anniversary Special Mug", 249, "/products/mugs/mug-anniversary-blue-inusa.webp"),
+  P("Business Logo Mug", 199, "/products/mugs/mug-branded-pink-joelmasilva.webp"),
+  P("Corporate Mug (Pair)", 349, "/products/mugs/mug-corporate-orange-edrok-pair.webp"),
+  P("Premium Logo Mug (Pair)", 399, "/products/mugs/mug-corporate-white-anna-pair.webp"),
+  P("Consulting Brand Mug (Pair)", 399, "/products/mugs/mug-corporate-navy-roem-pair.webp"),
+  P("Bulk Event Mugs (Set of 50)", 5999, "/products/mugs/mug-bulk-white-itau.webp"),
+],
   "ss-letters": [
     P("SS Mirror Letters", 550, "/products/ss-letters/ss-mirror-letter.webp"),
   P("SS Backlit Halo Letters", 850, "/products/ss-letters/ss-backlit-letter.webp"),
   P("SS Mirror Letters (Curved)", 580, "/products/ss-letters/ss-mirror-letter-alt.webp"),
   ],
-  "gold-letters": [
-    P("Gold Mirror Letters", 700), P("Gold Matte Letters", 700), P("Gold Backlit Letters", 900),
-    P("Gold PVD Coated Letters", 850), P("Champagne Gold Letters", 800), P("Gold Logo Emblem", 2500),
-    P("Brushed Gold Letters", 780), P("Gold + Black Combo Letters", 820), P("Gold Reception Sign", 5000),
-    P("Gold Solid Cast Letters", 1200),
-  ],
+ 
   caricature: [
     P("Valentine Proposal Caricature", 799, "/products/caricature/valentine-proposal-caricature.webp"),
     P("Best Sister Caricature", 699, "/products/caricature/best-sister-caricature.webp"),
@@ -181,12 +205,13 @@ export const products: Record<string, Product[]> = {
     P("Save the Date Tag Invite", 28, "/products/invitations/save-the-date-teal-tag.webp"),
     P("Floral Wedding Invitation", 25, "/products/invitations/floral-yellow-invitation.webp"),
   ],
-  awards: [
-    P("Acrylic Awards", 650), P("Crystal Trophies", 1200), P("Wooden Plaques", 850),
-    P("Metal Trophies", 1500), P("Star Trophies", 950), P("Custom Shape Awards", 1100),
-    P("Employee Awards", 900), P("Sports Trophies", 750), P("Appreciation Plaques", 800),
-    P("Glass Mementos", 1000),
-  ],
+ trophies: [
+  P("Ring Award Trophy", 1499, "/products/trophies/trophy-ring-billboard-award.webp"),
+  P("Gold Star Trophy", 899, "/products/trophies/trophy-gold-star-swirl.webp"),
+  P("Gold Leaf Twist Trophy", 999, "/products/trophies/trophy-gold-leaf-twist.webp"),
+  P("Olympic Figure Trophy", 1299, "/products/trophies/trophy-olympic-figure-gold.webp"),
+  P("Excellence Award (Set of 3)", 2499, "/products/trophies/trophy-excellence-set-three.webp"),
+],
  clocks: [
     P("Acrylic Photo Clock", 899, "/products/clocks/geometric-photo-clock.webp"),
     P("Round Wall Clock", 799, "/products/clocks/round-couple-photo-clock.webp"),
@@ -196,18 +221,17 @@ export const products: Record<string, Product[]> = {
     P("Custom Brand Clock", 999, "/products/clocks/corporate-logo-clock-2.webp"),
     P("Custom Shape Clock", 1099, "/products/clocks/tooth-shape-clock.webp")
   ],
-  bottles: [
-    P("Steel Sipper Bottle", 349), P("Copper Bottle Engraved", 799), P("Temperature Bottle", 649),
-    P("Sports Sipper", 399), P("Glass Bottle Printed", 449), P("Vacuum Flask", 699),
-    P("Kids Bottle", 349), P("Bottle + Mug Combo", 749), P("Bamboo Lid Bottle", 549),
-    P("Corporate Bulk Bottles (25+)", 299),
-  ],
-  "wedding-gifts": [
-    P("Return Gift Combo", 199), P("Personalized Mugs", 249), P("Photo Keychains", 99),
-    P("Mini Plant Pots", 149), P("Custom Chocolates Box", 299), P("Engraved Wooden Gifts", 349),
-    P("Silver Coated Gifts", 499), P("Gift Hampers", 599), P("Name Printed Diaries", 199),
-    P("Thank-You Cards Set (50)", 450),
-  ],
+ 
+  caps: [
+  P("Corporate Logo Cap", 199, "/products/caps/cap-corporate-white-magno.webp"),
+  P("Event Branded Cap", 179, "/products/caps/cap-branded-blue-balloon-station.webp"),
+  P("Embroidered Text Cap", 249, "/products/caps/cap-branded-blue-creative-department.webp"),
+  P("Printed Slogan Cap (Set of 3)", 499, "/products/caps/cap-motivational-tricolor.webp"),
+  P("Gradient Print Cap", 229, "/products/caps/cap-gradient-yellow-logo.webp"),
+  P("Corporate Embroidered Cap", 199, "/products/caps/cap-corporate-green-dwc.webp"),
+  P("Brand Colour Cap", 149, "/products/caps/cap-branded-green-renewa.webp"),
+  P("Bulk Corporate Caps (Set of 50)", 6999, "/products/caps/cap-bulk-green-collection.webp"),
+],
   "id-cards": [
   P("Corporate ID Card", 149, "/products/id-cards/id-card-corporate-red.webp"),
   P("Employee ID Card", 149, "/products/id-cards/id-card-corporate-green.webp"),
@@ -230,6 +254,6 @@ export const testimonials = [
   { name: "Ramesh Kumar", role: "Textile Showroom Owner", quote: "Excellent glow sign board! Quality is premium and the installation team was very professional." },
   { name: "Priya Sharma", role: "Café Owner", quote: "Our café wall graphics and 3D letters look stunning. Customers keep complimenting the branding!" },
   { name: "Venkat Rao", role: "Corporate HR Manager", quote: "Ordered 200+ customized gifts for our annual event. On-time delivery and beautiful packaging." },
-  { name: "Anil Reddy", role: "Jewellery Store", quote: "Gold letters look rich and elegant — exactly what our showroom needed. Great pricing too." },
+  { name: "Anil Reddy", role: "Jewellery Store", quote: "LED bords look rich and elegant — exactly what our showroom needed. Great pricing too." },
   { name: "Sneha Patel", role: "Boutique Owner", quote: "Complete inshop branding done in just one week. Creative team, smooth process, superb finish." },
 ];
