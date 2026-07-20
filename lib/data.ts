@@ -222,7 +222,7 @@ export const products: Record<string, Product[]> = {
   P("Olympic Figure Trophy", 1299, "/products/trophies/trophy-olympic-figure-gold.webp"),
   P("Excellence Award (Set of 3)", 2499, "/products/trophies/trophy-excellence-set-three.webp"),
   P("Certificate of Achievement", 599, "/products/trophies/trophy-gold-star-swirl copy.webp"),
-   P("Olympic Figure Trophy", 1299, "/products/trophies/trophy-gold-leaf-twist copy.webp"),
+   P("Olympic Figure Trophy", 1299, "/products/trophies/trophy-olympic-figure-gold.webp"),
   P("Excellence Award (Set of 3)", 2499, "/products/trophies/trophy-ring-billboard-award copy.webp"),
   P("Certificate of Achievement", 599, "/products/trophies/trophy-olympic-figure-gold copy.webp"),
   P("Olympic Figure Trophy", 1299, "/products/trophies/trophy-olympic-figure-gold.webp"),
