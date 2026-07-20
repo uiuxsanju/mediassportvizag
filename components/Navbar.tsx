@@ -4,9 +4,10 @@ import Image from "next/image";
 import { Menu, X, ShoppingCart, Phone } from "lucide-react";
 import { useCart } from "@/lib/cart";
 import { PHONE } from "@/lib/data";
+import SearchBar from "./SearchBar";
 
 const links = [
-  ["Home", "#home"], ["Services", "#services"], ["Portfolio", "#portfolio"],
+  ["Home", "#home"], ["Services", "#services"],
   ["About", "#about"], ["Why Us", "#why"], ["Testimonials", "#testimonials"],
   ["Contact", "#contact"],
 ];
@@ -17,18 +18,18 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 bg-white shadow-soft h-[72px]">
-      <div className="mx-auto w-[92%] max-w-[1180px] h-full flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2">
+      <div className="mx-auto w-[92%] max-w-[1180px] h-full flex items-center justify-between gap-4">
+        <a href="#home" className="flex items-center gap-2 shrink-0">
           <span className="bg-brand rounded-xl p-1.5">
             <Image src="/logo.jpeg" alt="MEDIASPOT logo" width={46} height={36} className="rounded-md object-cover" priority />
           </span>
-          <span className="leading-none">
+          <span className="leading-none hidden sm:block">
             <b className="font-heading font-black text-[1.05rem] block">MEDIASPOT</b>
             <span className="text-[0.55rem] tracking-[0.32em] font-bold">ADVERTISING HUB</span>
           </span>
         </a>
 
-        <ul className="hidden lg:flex gap-6">
+        <ul className="hidden lg:flex gap-6 shrink-0">
           {links.map(([label, href]) => (
             <li key={href}>
               <a href={href} className="font-semibold text-sm relative py-1 group">
@@ -39,7 +40,12 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
+        {/* Search — desktop */}
+        <div className="hidden md:block flex-1 max-w-[240px]">
+          <SearchBar />
+        </div>
+
+        <div className="flex items-center gap-2 shrink-0">
           <a href={`tel:+${PHONE}`} className="hidden sm:flex items-center gap-2 bg-black text-brand font-heading font-bold text-sm px-4 py-2.5 rounded-full hover:bg-hoverink transition">
             <Phone size={15} /> Call Now
           </a>
@@ -60,6 +66,10 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden bg-white shadow-lift px-[6%] pb-5">
+          {/* Search — mobile, shown inside the mobile menu */}
+          <div className="md:hidden py-3">
+            <SearchBar />
+          </div>
           {links.map(([label, href]) => (
             <a key={href} href={href} onClick={() => setOpen(false)}
               className="block py-3 font-semibold border-b border-black/5">{label}</a>
