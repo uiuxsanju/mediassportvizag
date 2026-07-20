@@ -146,7 +146,6 @@ export const products: Record<string, Product[]> = {
     P("Achievement LED Frame", 1699, "/products/frames/led-frames/led-white-coat-ceremony-frame.webp"),
     P("Love Story Collage LED Frame", 1899, "/products/frames/led-frames/led-love-story-collage-frame.webp"),
     P("Heart Name LED Frame", 999, "/products/frames/led-frames/led-heart-name-frame.webp"),
-    
     P("Couple Hands LED Frame", 1199, "/products/frames/led-frames/led-couple-hands-frame.webp"),
     P("First Date Heart LED Frame", 1299, "/products/frames/led-frames/led-first-date-heart-frame.webp"),
     P("Custom Shape LED Sign", 1599, "/products/frames/led-frames/led-custom-shape-frame.webp"),
