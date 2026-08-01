@@ -95,13 +95,14 @@ export default function CategoryPage() {
                 </div>
                 <div className="p-3">
                   <h3 className="font-semibold text-sm leading-snug min-h-[2.4em]">{p.name}</h3>
-                  <button
+               <button
                     onClick={() =>
                       add({
                         id: key,
                         name: p.name,
                         desc: category.name,
                         img: p.img || category.img,
+                        images: [p.img || category.img],
                         price: p.price,
                         unit: "",
                       })
