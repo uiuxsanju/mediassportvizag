@@ -10,7 +10,7 @@ function CatImage({ src, alt }: { src: string; alt: string }) {
   const [error, setError] = useState(false);
   if (error) {
     return (
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 bg-neutral-100 text-neutral-400">
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 text-neutral-400">
         <ImageOff size={22} />
         <span className="text-[10px] font-medium">Image coming soon</span>
       </div>
@@ -21,8 +21,8 @@ function CatImage({ src, alt }: { src: string; alt: string }) {
       src={src}
       alt={alt}
       fill
-      sizes="(max-width:768px) 100vw, 280px"
-      className="object-cover group-hover:scale-105 transition duration-500"
+      sizes="(max-width:768px) 50vw, 280px"
+      className="object-contain p-7 group-hover:scale-105 transition duration-500"
       onError={() => setError(true)}
     />
   );
@@ -30,7 +30,7 @@ function CatImage({ src, alt }: { src: string; alt: string }) {
 
 export default function Services() {
   return (
-    <section id="services" className="pt-20 pb-20">
+    <section id="services" className="pt-20 pb-24">
       <div className="mx-auto w-[92%] max-w-[1180px]">
         <SectionHead
           eyebrow="Services"
@@ -38,22 +38,16 @@ export default function Services() {
           sub="Pick a category to explore products and add to cart."
         />
 
-        <div className="grid gap-5 [grid-template-columns:repeat(auto-fill,minmax(240px,1fr))]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-16 sm:gap-y-20">
           {services.map((s) => (
-            <Link
-              key={s.id}
-              href={`/services/${s.id}`}
-              className="group bg-white rounded-2xl overflow-hidden shadow-soft text-left border border-black/5 hover:-translate-y-1 hover:shadow-lg transition block"
-            >
-              <div className="relative aspect-[4/3]">
-                <CatImage src={s.img} alt={s.name} />
-              </div>
-              <div className="p-4">
-                <h3 className="font-heading font-bold text-base">{s.name}</h3>
-                <p className="text-neutral-500 text-sm mt-1 line-clamp-2">{s.desc}</p>
-                <div className="flex justify-end mt-3">
-                  <span className="text-xs font-bold text-brand bg-black rounded-full px-3 py-1.5 group-hover:bg-brand group-hover:text-black transition">
-                    View Products →
+            <Link key={s.id} href={`/services/${s.id}`} className="group block">
+              <div className="relative">
+                <div className="relative aspect-square bg-neutral-100 rounded-[28px] overflow-hidden border border-black/5">
+                  <CatImage src={s.img} alt={s.name} />
+                </div>
+                <div className="absolute left-1/2 bottom-0 w-full -translate-x-1/2 translate-y-1/2 flex justify-center px-2">
+                  <span className="bg-white shadow-soft rounded-full px-5 py-3 font-heading font-bold text-sm text-center leading-tight group-hover:bg-brand transition">
+                    {s.name}
                   </span>
                 </div>
               </div>
