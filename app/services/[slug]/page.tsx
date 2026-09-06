@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { services, products } from "@/lib/data";
 import { useCart } from "@/lib/cart";
-import { ArrowLeft, Heart, Plus, ImageOff } from "lucide-react";
+import { ArrowLeft, Heart, Plus, Check, ImageOff } from "lucide-react";
 
 const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
@@ -38,6 +38,7 @@ export default function CategoryPage() {
   const category = services.find((s) => s.id === slug);
   const list = products[slug] ?? [];
   const [wishlist, setWishlist] = useState<Set<string>>(new Set());
+  const [addedKeys, setAddedKeys] = useState<Set<string>>(new Set());
   const { add } = useCart();
 
   const toggleWish = (key: string) => {
@@ -46,6 +47,18 @@ export default function CategoryPage() {
       next.has(key) ? next.delete(key) : next.add(key);
       return next;
     });
+  };
+
+  const handleAdd = (key: string, item: Parameters<typeof add>[0]) => {
+    add(item);
+    setAddedKeys((prev) => new Set(prev).add(key));
+    setTimeout(() => {
+      setAddedKeys((prev) => {
+        const next = new Set(prev);
+        next.delete(key);
+        return next;
+      });
+    }, 1200);
   };
 
   if (!category) {
@@ -95,9 +108,9 @@ export default function CategoryPage() {
                 </div>
                 <div className="p-3">
                   <h3 className="font-semibold text-sm leading-snug min-h-[2.4em]">{p.name}</h3>
-               <button
+                  <button
                     onClick={() =>
-                      add({
+                      handleAdd(key, {
                         id: key,
                         name: p.name,
                         desc: category.name,
@@ -107,9 +120,22 @@ export default function CategoryPage() {
                         unit: "",
                       })
                     }
-                    className="w-full mt-2.5 flex items-center justify-center gap-1.5 bg-black text-brand text-xs font-semibold rounded-full px-3 py-2 hover:bg-brand hover:text-black transition"
+                    disabled={addedKeys.has(key)}
+                    className={`w-full mt-2.5 flex items-center justify-center gap-1.5 text-xs font-semibold rounded-full px-3 py-2 transition ${
+                      addedKeys.has(key)
+                        ? "bg-green-600 text-white"
+                        : "bg-black text-brand hover:bg-brand hover:text-black"
+                    }`}
                   >
-                    <Plus size={13} /> Add to Cart
+                    {addedKeys.has(key) ? (
+                      <>
+                        <Check size={13} /> Added
+                      </>
+                    ) : (
+                      <>
+                        <Plus size={13} /> Add to Cart
+                      </>
+                    )}
                   </button>
                 </div>
               </div>

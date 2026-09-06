@@ -22,7 +22,7 @@ function CatImage({ src, alt }: { src: string; alt: string }) {
       alt={alt}
       fill
       sizes="(max-width:768px) 50vw, 280px"
-      className="object-contain p-7 group-hover:scale-105 transition duration-500"
+      className="object-contain p-3 group-hover:scale-105 transition duration-500"
       onError={() => setError(true)}
     />
   );

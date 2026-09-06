@@ -40,7 +40,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "MEDIASPOT – Advertising Hub",
-              telephone: "+91-9XXXXXXXXX",
+              telephone: "+91 9133910782",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Visakhapatnam",
