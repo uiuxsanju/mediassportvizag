@@ -30,6 +30,8 @@ const gallery = (id: string) => Array.from({ length: 5 }, (_, i) => `/services-h
 export const services: Service[] = [
   { id: "sign-board", name: "Sign Boards", desc: "Durable flex & board signage that gets your shop noticed.", img: "/services/sign-board.webp", images: gallery("sign-board"), price: 3500, unit: "from ₹3,500" },
   { id: "name-boards", name: "Name Boards", desc: "Custom name boards for homes, offices & shops — wood, acrylic & metal finishes.", img: "/services/name-boards.webp", images: gallery("name-boards"), price: 0, unit: "Get Quote" },
+    { id: "mini-me", name: "Mini Me", desc: "3D caricature standees & personalized mini figures.", img: "/services/mini-me.webp", images: gallery("mini-me"), price: 0, unit: "Get Quote" },
+
   { id: "inshop-branding", name: "In-Shop Branding", desc: "Complete interior branding — walls, counters & displays.", img: "/services/inshop-branding.webp", images: gallery("inshop-branding"), price: 0, unit: "Get Quote" },
   { id: "vehicle-wraps", name: "Vehicle Wrapping", desc: "Custom vinyl wraps for vans, trucks & fleet vehicles.", img: "/services/vehicle-wraps.webp", images: gallery("vehicle-wraps"), price: 4999, unit: "from ₹4,999" },
   { id: "ss-letters", name: "SS Letters", desc: "Stainless steel letters — mirror & matte finish.", img: "/services/ss-letters.webp", images: gallery("ss-letters"), price: 550, unit: "₹550 / letter" },
@@ -42,7 +44,6 @@ export const services: Service[] = [
   { id: "exhibition-signage", name: "Exhibition & Event Signage", desc: "Complete signage solutions for exhibitions & events.", img: "/services/exhibition-signage.webp", images: gallery("exhibition-signage"), price: 0, unit: "Get Quote" },
   { id: "customized-gifts", name: "Customized Gifts", desc: "Personalized corporate & festival gifting solutions.", img: "/services/customized-gifts.webp", images: gallery("customized-gifts"), price: 0, unit: "Get Quote" },
   { id: "arch-gates", name: "Arch Gates", desc: "Decorative arch gates for events & inaugurations.", img: "/services/arch-gates.webp", images: gallery("arch-gates"), price: 0, unit: "Get Quote" },
-  { id: "mini-me", name: "Mini Me", desc: "3D caricature standees & personalized mini figures.", img: "/services/mini-me.webp", images: gallery("mini-me"), price: 0, unit: "Get Quote" },
   { id: "clocks", name: "Clocks", desc: "Custom photo clocks — wall, wooden & tabletop designs.", img: "/services/clocks.webp", images: gallery("clocks"), price: 0, unit: "Get Quote" },
   { id: "customized-mementos", name: "Customized Mementos", desc: "Corporate & festival mementos personalized for every occasion.", img: "/services/customized-mementos.webp", images: gallery("customized-mementos"), price: 0, unit: "Get Quote" },
   { id: "photo-mug", name: "Photo Mug", desc: "Personalized photo mugs — perfect for gifting.", img: "/services/photo-mug.webp", images: gallery("photo-mug"), price: 0, unit: "Get Quote" },
