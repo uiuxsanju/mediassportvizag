@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-black">
       <video
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-70"
         src="/videos/hero.mp4"
         poster="/videos/hero-poster.jpg"
         autoPlay
@@ -39,13 +39,13 @@ export default function Hero() {
         preload="metadata"
         aria-hidden="true"
       />
-      <div aria-hidden className="pointer-events-none absolute inset-0 z-[1] bg-black/12" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-[1] bg-black/25" />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.05) 100%)",
+            "linear-gradient(90deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.35) 50%, rgba(0,0,0,.12) 100%)",
         }}
       />
       <div className="pointer-events-none absolute -top-28 -right-24 w-[420px] h-[420px] rounded-full bg-brand blur-[110px] opacity-10 z-[1]" />
