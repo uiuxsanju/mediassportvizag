@@ -30,8 +30,6 @@ const gallery = (id: string) => Array.from({ length: 5 }, (_, i) => `/services-h
 export const services: Service[] = [
   { id: "sign-board", name: "Sign Boards", desc: "Durable flex & board signage that gets your shop noticed.", img: "/services/sign-board.webp", images: gallery("sign-board"), price: 3500, unit: "from ₹3,500" },
   { id: "name-boards", name: "Name Boards", desc: "Custom name boards for homes, offices & shops — wood, acrylic & metal finishes.", img: "/services/name-boards.webp", images: gallery("name-boards"), price: 0, unit: "Get Quote" },
-    { id: "mini-me", name: "Mini Me", desc: "3D caricature standees & personalized mini figures.", img: "/services/mini-me.webp", images: gallery("mini-me"), price: 0, unit: "Get Quote" },
-
   { id: "inshop-branding", name: "In-Shop Branding", desc: "Complete interior branding — walls, counters & displays.", img: "/services/inshop-branding.webp", images: gallery("inshop-branding"), price: 0, unit: "Get Quote" },
   { id: "vehicle-wraps", name: "Vehicle Wrapping", desc: "Custom vinyl wraps for vans, trucks & fleet vehicles.", img: "/services/vehicle-wraps.webp", images: gallery("vehicle-wraps"), price: 4999, unit: "from ₹4,999" },
   { id: "ss-letters", name: "SS Letters", desc: "Stainless steel letters — mirror & matte finish.", img: "/services/ss-letters.webp", images: gallery("ss-letters"), price: 550, unit: "₹550 / letter" },
@@ -44,6 +42,7 @@ export const services: Service[] = [
   { id: "exhibition-signage", name: "Exhibition & Event Signage", desc: "Complete signage solutions for exhibitions & events.", img: "/services/exhibition-signage.webp", images: gallery("exhibition-signage"), price: 0, unit: "Get Quote" },
   { id: "customized-gifts", name: "Customized Gifts", desc: "Personalized corporate & festival gifting solutions.", img: "/services/customized-gifts.webp", images: gallery("customized-gifts"), price: 0, unit: "Get Quote" },
   { id: "arch-gates", name: "Arch Gates", desc: "Decorative arch gates for events & inaugurations.", img: "/services/arch-gates.webp", images: gallery("arch-gates"), price: 0, unit: "Get Quote" },
+  { id: "mini-me", name: "Mini Me", desc: "3D caricature standees & personalized mini figures.", img: "/services/mini-me.webp", images: gallery("mini-me"), price: 0, unit: "Get Quote" },
   { id: "clocks", name: "Clocks", desc: "Custom photo clocks — wall, wooden & tabletop designs.", img: "/services/clocks.webp", images: gallery("clocks"), price: 0, unit: "Get Quote" },
   { id: "customized-mementos", name: "Customized Mementos", desc: "Corporate & festival mementos personalized for every occasion.", img: "/services/customized-mementos.webp", images: gallery("customized-mementos"), price: 0, unit: "Get Quote" },
   { id: "photo-mug", name: "Photo Mug", desc: "Personalized photo mugs — perfect for gifting.", img: "/services/photo-mug.webp", images: gallery("photo-mug"), price: 0, unit: "Get Quote" },
@@ -177,6 +176,9 @@ export const portfolioCats = [
 ] as const;
 
 export const testimonials = [
+  { name: "Shankar Uda", role: "Ishaan Interiors", quote: "I'd like to sincerely appreciate the MediaSpot team for their exceptional work and professionalism. A young, talented, passionate team delivering excellent quality creative work. I've personally availed their services and have been really happy with their dedication and results. Confidently recommend MediaSpot for creative, professional, high-quality media services." },
+  { name: "Syamprasad Sarvasiddhi", role: "Managing Director, Sree Rudra Group", quote: "Goush Garu didn't just create sign boards — he gave the Sree Rudra Estate brand a strong and premium identity. Creative design, premium quality, perfect finishing and timely delivery — 100% confidently recommend MediaSpot for branding & signage services." },
+  { name: "Govind Rao Challa", role: "Spring Cleaners", quote: "Excellent and outstanding service. The Spring Cleaners signboard looks absolutely amazing and has completely transformed the outlook of my office. Thank you, Goush Subhani Garu, for your wonderful support and excellent work. Highly recommended." },
   { name: "Ramesh Kumar", role: "Textile Showroom Owner", quote: "Excellent glow sign board! Quality is premium and the installation team was very professional." },
   { name: "Priya Sharma", role: "Café Owner", quote: "Our café wall graphics and 3D letters look stunning. Customers keep complimenting the branding!" },
   { name: "Venkat Rao", role: "Corporate HR Manager", quote: "Ordered 200+ customized gifts for our annual event. On-time delivery and beautiful packaging." },
