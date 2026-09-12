@@ -48,7 +48,10 @@ export const services: Service[] = [
   { id: "customized-mementos", name: "Customized Mementos", desc: "Corporate & festival mementos personalized for every occasion.", img: "/services/customized-mementos.webp", images: gallery("customized-mementos"), price: 0, unit: "Get Quote" },
   { id: "photo-mug", name: "Photo Mug", desc: "Personalized photo mugs — perfect for gifting.", img: "/services/photo-mug.webp", images: gallery("photo-mug"), price: 0, unit: "Get Quote" },
   { id: "customized-invitations", name: "Customized Invitations", desc: "Custom wedding & event invitation cards, personalized designs.", img: "/services/customized-invitations.webp", images: gallery("customized-invitations"), price: 0, unit: "Get Quote" },
-  { id: "table-tops", name: "Table Tops", desc: "Custom printed table-top glass & laminate covers.", img: "/services/table-tops.webp", images: gallery("table-tops"), price: 0, unit: "Get Quote" },
+  { id: "table-tops", name: "Table Tops", desc: "Executive desk nameplate & accessory sets — clocks, pen holders & more.", img: "/services/table-tops.webp", images: gallery("table-tops"), price: 0, unit: "Get Quote" },
+  { id: "caps", name: "Caps", desc: "Custom embroidered & printed branded caps.", img: "/services/caps.webp", images: gallery("caps"), price: 0, unit: "Get Quote" },
+  { id: "keychains", name: "Key Chains", desc: "Custom photo, printed strap & branded keychains.", img: "/services/keychains.webp", images: gallery("keychains"), price: 0, unit: "Get Quote" },
+  { id: "id-cards", name: "ID Cards", desc: "Corporate, medical & institutional ID cards with lanyards.", img: "/services/id-cards.webp", images: gallery("id-cards"), price: 0, unit: "Get Quote" },
 ];
 
 // ─────────────────────────────────────────────────────────────
@@ -74,20 +77,13 @@ export const products: Record<string, Product[]> = {
     P("Multi-Brand LED Facade", 9999, "/products/sign-board/signboard-led-brand-facade.webp"),
     P("Dental Clinic Oval Backlit Sign", 5500, "/products/sign-board/signboard-ethos-dental-oval-backlit.webp"),
     P("Hexagon Backlit Sign", 7500, "/products/sign-board/signboard-hexagon-backlit-red.webp"),
-    P("Bakery Advertising Sign", 7500, "/products/sign-board/signboard-hexagon-red.webp"),
-    P("Coffee Board Advertising Sign", 7500, "/products/sign-board/signboard-coffee-red.webp"),
-    P("Amazon-Style Backlit Frame Sign", 8500, "/products/sign-board/signboard-amazon-backlit-frame.webp"),
-    P("Google Marquee Bulb Sign", 8999, "/products/sign-board/signboard-google-marquee-bulb.webp"),
-    P("3D Nike-Style Acrylic Sign", 7999, "/products/sign-board/signboard-nike-splash-acrylic.webp"),
-    P("Gold Mirror SS Letters Sign", 8500, "/products/sign-board/signboard-ss-letters-gold-mirror.webp"),
-    
-
   ],
  "inshop-branding": [
     P("Interior Wall Graphics", 3500, "/products/inshop-branding/inshop.webp"),
     P("Backlit Menu Board", 4500, "/products/inshop-branding/inshop-reception.webp"),
     P("Shelf Strips & Danglers", 1500, "/products/inshop-branding/inshop-shelf-strips-danglers.webp"),
     P("Window Vinyl Branding", 2500, "/products/inshop-branding/inshop-wall-graphics.webp"),
+   
 ],
 "pvc-letters": [
     P("PVC Cutout Letters", 2500, "/products/pvc-letters/pvc-cutout-letters.webp"),
@@ -98,7 +94,7 @@ export const products: Record<string, Product[]> = {
     P("Highway Unipole Hoarding", 25000, "/products/flex-printing/flex-highway-unipole.webp"),
     P("Hoarding Flex Print", 18000, "/products/flex-printing/flex-hoarding-billboard.webp"),
     P("Pole Kiosk Branding", 2500, "/products/flex-printing/flex-pole-kiosk-branding.webp"),
-   
+    P("Flex Banner & Billboard Showcase", 8500, "/products/flex-printing/flex-banner-billboard-showcase.webp"),
 ],
 "laser-cnc-cutting": [
     P("Metal Sheet Laser Cutting", 4500, "/products/laser-cnc-cutting/lasercnc-metal-sheet-cutting.webp"),
@@ -234,7 +230,6 @@ export const products: Record<string, Product[]> = {
   ],
   "customized-mementos": [
    
-    
     P("Cricket Championship Trophy", 1899, "/products/customized-mementos/memento-trophy-cricket-championship-wood.webp"),
     P("Anniversary Heart Photo Plaque", 1699, "/products/customized-mementos/memento-heart-anniversary-photo-plaque.webp"),
     P("Winner Congratulations Trophy", 1499, "/products/customized-mementos/memento-trophy-winner-congratulations.webp"),
@@ -242,13 +237,48 @@ export const products: Record<string, Product[]> = {
     P("Football Championship Trophy", 1699, "/products/customized-mementos/memento-trophy-football-championship.webp"),
     P("Best Employee Award Trophy", 1399, "/products/customized-mementos/memento-trophy-best-employee-award.webp"),
   ],
-"table-tops": [
-    P("Tooth-Shape Dentist Memento", 899, "/products/table-tops/memento-led-tooth-shape-dentist.webp"),
-    P("Heart Love Couple Memento", 899, "/products/table-tops/memento-led-heart-love-couple.webp"),
-    P("Holding Hands Couple Memento", 999, "/products/table-tops/memento-led-holding-hands-couple.webp"),
-    P("Heart Calendar First Date Memento", 999, "/products/table-tops/memento-led-heart-calendar-first-date.webp"),
-    P("Circle Family Photo Memento", 1299, "/products/table-tops/memento-led-circle-family-photo-collage.webp"),
-    P("Love Story Timeline Memento", 1299, "/products/table-tops/memento-led-love-story-timeline.webp"),
+ "table-tops": [
+  P("Memento LED Circle Family Photo Collage", 1999, "/products/table-tops/memento-led-circle-family-photo-collage.webp"),
+
+
+  P("Memento LED Heart Calendar First Date", 1999, "/products/table-tops/memento-led-heart-calendar-first-date.webp"),
+
+  P("Memento LED Heart Love Couple", 1999, "/products/table-tops/memento-led-heart-love-couple.webp"),
+
+  P("Memento LED Holding Hands Couple", 1999, "/products/table-tops/memento-led-holding-hands-couple.webp"),
+
+
+  P("Memento LED Love Story Timeline", 1999, "/products/table-tops/memento-led-love-story-timeline.webp"),
+
+  P("Memento LED Tooth Shape Dentist", 1999, "/products/table-tops/memento-led-tooth-shape-dentist.webp"),
+
+],
+  caps: [
+    P("Corporate Branded Cap", 299, "/products/caps/cap-branded-blue-creative-department.webp"),
+    P("Corporate Branded Cap II", 299, "/products/caps/cap-branded-blue-balloon-station.webp"),
+    P("Corporate Cap - White", 279, "/products/caps/cap-corporate-white-magno.webp"),
+    P("Motivational Tricolor Caps", 249, "/products/caps/cap-motivational-tricolor.webp"),
+    P("Gradient Print Cap", 329, "/products/caps/cap-gradient-yellow-logo.webp"),
+    P("Corporate Cap - Green", 299, "/products/caps/cap-corporate-green-dwc.webp"),
+    P("Branded Cap - Green", 299, "/products/caps/cap-branded-green-renewa.webp"),
+    P("Bulk Order Caps", 199, "/products/caps/cap-bulk-green-collection.webp"),
+  ],
+  keychains: [
+    P("Heart Photo Keychain", 199, "/products/keychains/heart-couple-photo-keychain.webp"),
+    P("Heart Family Photo Keychain", 199, "/products/keychains/heart-family-pet-keychain.webp"),
+    P("Printed Strap Keychain", 99, "/products/keychains/wanderlust-strap-keychain.webp"),
+    P("Branded Lanyard Keychain Bundle", 89, "/products/keychains/keychain-trigadoz-lanyard-bundle.webp"),
+    P("Wooden Photo Keychain", 249, "/products/keychains/keychain-trigadoz-lanyard-bundle.webp"),
+    P("Acrylic Name Keychain", 179, "/products/keychains/keychain-acrylic-name.webp"),
+    P("Round Photo Keychain", 179, "/products/keychains/keychain-round-photo.webp"),
+    
+  ],
+  "id-cards": [
+    P("Corporate ID Card - Blue", 149, "/products/id-cards/id-card-corporate-blue.webp"),
+    P("Corporate ID Card - Green", 149, "/products/id-cards/id-card-corporate-green.webp"),
+    P("Corporate ID Card - Red", 149, "/products/id-cards/id-card-corporate-red.webp"),
+    P("Medical Staff ID Card", 169, "/products/id-cards/id-card-medical-purple.webp"),
+    P("Institution ID Card Bundle", 129, "/products/id-cards/id-card-lanyard-bundle-school.webp"),
   ],
 };
 

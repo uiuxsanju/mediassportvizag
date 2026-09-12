@@ -1,1 +1,0 @@
-{ id: "keychains", name: "Key Chains", desc: "Custom photo & branded keychains.", img: "/products/keychains/heart-couple-photo-keychain.webp", price: 99, unit: "from ₹99" },

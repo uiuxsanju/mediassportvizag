@@ -30,7 +30,7 @@ function CatImage({ src, alt }: { src: string; alt: string }) {
 
 export default function Services() {
   return (
-    <section id="services" className="pt-20 pb-24">
+    <section id="services" className="pt-20 pb-24 bg-white">
       <div className="mx-auto w-[92%] max-w-[1180px]">
         <SectionHead
           eyebrow="Services"
@@ -42,7 +42,7 @@ export default function Services() {
           {services.map((s) => (
             <Link key={s.id} href={`/services/${s.id}`} className="group block">
               <div className="relative">
-                <div className="relative aspect-square bg-neutral-100 rounded-[28px] overflow-hidden border border-black/5">
+                <div className="relative aspect-square bg-white rounded-[28px] overflow-hidden transition-shadow duration-300 group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                   <CatImage src={s.img} alt={s.name} />
                 </div>
                 <div className="absolute left-1/2 bottom-0 w-full -translate-x-1/2 translate-y-1/2 flex justify-center px-2">
