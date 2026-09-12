@@ -74,16 +74,20 @@ export const products: Record<string, Product[]> = {
     P("Multi-Brand LED Facade", 9999, "/products/sign-board/signboard-led-brand-facade.webp"),
     P("Dental Clinic Oval Backlit Sign", 5500, "/products/sign-board/signboard-ethos-dental-oval-backlit.webp"),
     P("Hexagon Backlit Sign", 7500, "/products/sign-board/signboard-hexagon-backlit-red.webp"),
+    P("Bakery Advertising Sign", 7500, "/products/sign-board/signboard-hexagon-red.webp"),
+    P("Coffee Board Advertising Sign", 7500, "/products/sign-board/signboard-coffee-red.webp"),
+    P("Amazon-Style Backlit Frame Sign", 8500, "/products/sign-board/signboard-amazon-backlit-frame.webp"),
+    P("Google Marquee Bulb Sign", 8999, "/products/sign-board/signboard-google-marquee-bulb.webp"),
+    P("3D Nike-Style Acrylic Sign", 7999, "/products/sign-board/signboard-nike-splash-acrylic.webp"),
+    P("Gold Mirror SS Letters Sign", 8500, "/products/sign-board/signboard-ss-letters-gold-mirror.webp"),
+    
+
   ],
  "inshop-branding": [
     P("Interior Wall Graphics", 3500, "/products/inshop-branding/inshop.webp"),
     P("Backlit Menu Board", 4500, "/products/inshop-branding/inshop-reception.webp"),
     P("Shelf Strips & Danglers", 1500, "/products/inshop-branding/inshop-shelf-strips-danglers.webp"),
     P("Window Vinyl Branding", 2500, "/products/inshop-branding/inshop-wall-graphics.webp"),
-    P("Boutique Reception Branding", 5500, "/products/inshop-branding/inshop-boutique-reception.webp"),
-    P("Premium Marble Reception Signage", 8500, "/products/inshop-branding/inshop-premium-marble-reception.webp"),
-    P("Office Lobby Branding", 6500, "/products/inshop-branding/inshop-office-lobby-branding.webp"),
-    P("Corporate Reception Wall", 5999, "/products/inshop-branding/inshop-corporate-reception-wall.webp"),
 ],
 "pvc-letters": [
     P("PVC Cutout Letters", 2500, "/products/pvc-letters/pvc-cutout-letters.webp"),
@@ -94,7 +98,7 @@ export const products: Record<string, Product[]> = {
     P("Highway Unipole Hoarding", 25000, "/products/flex-printing/flex-highway-unipole.webp"),
     P("Hoarding Flex Print", 18000, "/products/flex-printing/flex-hoarding-billboard.webp"),
     P("Pole Kiosk Branding", 2500, "/products/flex-printing/flex-pole-kiosk-branding.webp"),
-    P("Flex Banner & Billboard Showcase", 8500, "/products/flex-printing/flex-banner-billboard-showcase.webp"),
+   
 ],
 "laser-cnc-cutting": [
     P("Metal Sheet Laser Cutting", 4500, "/products/laser-cnc-cutting/lasercnc-metal-sheet-cutting.webp"),
@@ -114,10 +118,7 @@ export const products: Record<string, Product[]> = {
     P("LED Display Vehicle", 25000, "/products/road-show-vehicles/roadshow-display.webp"),
     P("Auto Rickshaw Hood Branding", 3500, "/products/road-show-vehicles/roadshow-auto-hood.webp"),
     P("Mobile Canter Campaign Setup", 35000, "/products/road-show-vehicles/roadshow-canter-campaign.webp"),
-    P("Mobile Stage Truck - Product Launch", 45000, "/products/road-show-vehicles/roadshow-mobile-stage-launch.webp"),
-    P("Mobile Stage Truck - Festive Promo", 38000, "/products/road-show-vehicles/roadshow-mobile-stage-festive.webp"),
-    P("Mobile Showroom Truck", 42000, "/products/road-show-vehicles/roadshow-mobile-showroom-furniture.webp"),
-    P("Mobile Stage Truck - Sports Promo", 40000, "/products/road-show-vehicles/roadshow-mobile-stage-sports.webp"),
+   
 ],
 "arch-gates": [
     P("Event Entrance Arch Gate", 12000, "/products/arch-gates/archgate-sports-event.webp"),
@@ -167,7 +168,6 @@ export const products: Record<string, Product[]> = {
     P("SS Mirror Letters", 550, "/products/ss-letters/ss-mirror-letter.webp"),
     P("SS Backlit Halo Letters", 850, "/products/ss-letters/ss-backlit-letter.webp"),
     P("SS Mirror Letters (Curved)", 580, "/products/ss-letters/ss-mirror-letter-alt.webp"),
-    P("Gold Mirror Finish Letters", 750, "/products/ss-letters/ssletters-gold-mirror-signage-word.webp"),
   ],
   frames: [
     P("Classic Photo Frame", 499, "/products/frames/classic-photo-frame-couple.webp"),
@@ -200,7 +200,6 @@ export const products: Record<string, Product[]> = {
     P("Save the Date Card - Green", 25, "/products/invitations/save-the-date-green.webp"),
     P("Save the Date Card - Teal Tag", 25, "/products/invitations/save-the-date-teal-tag.webp"),
     P("Wedding Typography Invitation", 30, "/products/invitations/wedding-typography-invitation.webp"),
-    P("Traditional Wedding Invitation Set", 45, "/products/customized-invitations/traditional-wedding-invitation-set.webp"),
   ],
   "photo-mug": [
     P("Anniversary Photo Mug", 349, "/products/mugs/mug-anniversary-blue-inusa.webp"),
@@ -221,7 +220,6 @@ export const products: Record<string, Product[]> = {
     P("Karwachauth Couple Caricature", 1499, "/products/caricature/karwachauth-couple-caricature.webp"),
     P("Karwachauth Couple Caricature II", 1499, "/products/caricature/karwachauth-couple-caricature-2.webp"),
     P("Mother's Day Caricature", 999, "/products/caricature/mothers-day-caricature.webp"),
-    P("Mini Me Kids Standee Collection", 1499, "/products/mini-me/mini-me-kids-standee-collection.webp"),
     P("Named Couple Caricature", 1499, "/products/caricature/named-couple-caricature.webp"),
     P("Superhero Mother Caricature", 1299, "/products/caricature/superhero-mother-caricature.webp"),
     P("Supermom Caricature", 999, "/products/caricature/supermom-caricature.webp"),
@@ -235,14 +233,22 @@ export const products: Record<string, Product[]> = {
     P("Pink Heart Shape Name Board", 2200, "/products/name-boards/nameboard-ishika-homes-pink-heart.webp"),
   ],
   "customized-mementos": [
-    P("LED Photo Collage Memento", 1499, "/products/customized-mementos/memento-led-love-story-photo-collage.webp"),
-    P("White Coat Ceremony Memento", 999, "/products/customized-mementos/memento-led-white-coat-ceremony.webp"),
-    P("Tooth-Shape Dentist Memento", 899, "/products/customized-mementos/memento-led-tooth-shape-dentist.webp"),
-    P("Heart Love Couple Memento", 899, "/products/customized-mementos/memento-led-heart-love-couple.webp"),
-    P("Holding Hands Couple Memento", 999, "/products/customized-mementos/memento-led-holding-hands-couple.webp"),
-    P("Heart Calendar First Date Memento", 999, "/products/customized-mementos/memento-led-heart-calendar-first-date.webp"),
-    P("Circle Family Photo Memento", 1299, "/products/customized-mementos/memento-led-circle-family-photo-collage.webp"),
-    P("Love Story Timeline Memento", 1299, "/products/customized-mementos/memento-led-love-story-timeline.webp"),
+   
+    
+    P("Cricket Championship Trophy", 1899, "/products/customized-mementos/memento-trophy-cricket-championship-wood.webp"),
+    P("Anniversary Heart Photo Plaque", 1699, "/products/customized-mementos/memento-heart-anniversary-photo-plaque.webp"),
+    P("Winner Congratulations Trophy", 1499, "/products/customized-mementos/memento-trophy-winner-congratulations.webp"),
+    P("Achievement Award Trophy", 1599, "/products/customized-mementos/memento-trophy-achievement-award-wood.webp"),
+    P("Football Championship Trophy", 1699, "/products/customized-mementos/memento-trophy-football-championship.webp"),
+    P("Best Employee Award Trophy", 1399, "/products/customized-mementos/memento-trophy-best-employee-award.webp"),
+  ],
+"table-tops": [
+    P("Tooth-Shape Dentist Memento", 899, "/products/table-tops/memento-led-tooth-shape-dentist.webp"),
+    P("Heart Love Couple Memento", 899, "/products/table-tops/memento-led-heart-love-couple.webp"),
+    P("Holding Hands Couple Memento", 999, "/products/table-tops/memento-led-holding-hands-couple.webp"),
+    P("Heart Calendar First Date Memento", 999, "/products/table-tops/memento-led-heart-calendar-first-date.webp"),
+    P("Circle Family Photo Memento", 1299, "/products/table-tops/memento-led-circle-family-photo-collage.webp"),
+    P("Love Story Timeline Memento", 1299, "/products/table-tops/memento-led-love-story-timeline.webp"),
   ],
 };
 
