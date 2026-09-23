@@ -253,7 +253,6 @@ export const products: Record<string, Product[]> = {
     P("Memento LED Heart Calendar First Date", 1999, "/products/table-tops/memento-led-heart-calendar-first-date.webp"),
     P("Memento LED Heart Love Couple", 1999, "/products/table-tops/memento-led-heart-love-couple.webp"),
     P("Memento LED Holding Hands Couple", 1999, "/products/table-tops/memento-led-holding-hands-couple.webp"),
-    P("Memento LED Love Story Photo Collage", 1999, "/products/table-tops/memento-led-love-story-photo-collage.webp"),
     P("Memento LED Love Story Timeline", 1999, "/products/table-tops/memento-led-love-story-timeline.webp"),
     P("Memento LED Tooth Shape Dentist", 1999, "/products/table-tops/memento-led-tooth-shape-dentist.webp"),
   ],
