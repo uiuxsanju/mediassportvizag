@@ -48,7 +48,7 @@ export const services: Service[] = [
   { id: "customized-mementos", name: "Customized Mementos", desc: "Corporate & festival mementos personalized for every occasion.", img: "/services/customized-mementos.webp", images: gallery("customized-mementos"), price: 0, unit: "Get Quote" },
   { id: "photo-mug", name: "Photo Mug", desc: "Personalized photo mugs — perfect for gifting.", img: "/services/photo-mug.webp", images: gallery("photo-mug"), price: 0, unit: "Get Quote" },
   { id: "customized-invitations", name: "Customized Invitations", desc: "Custom wedding & event invitation cards, personalized designs.", img: "/services/customized-invitations.webp", images: gallery("customized-invitations"), price: 0, unit: "Get Quote" },
-  { id: "table-tops", name: "Table Tops", desc: "Executive desk nameplate & accessory sets — clocks, pen holders & more.", img: "/services/table-tops.webp", images: gallery("table-tops"), price: 0, unit: "Get Quote" },
+  { id: "table-tops", name: "Table Tops", desc: "LED acrylic desk standees — names, hearts & personalized plaques.", img: "/services/table-tops.webp", images: gallery("table-tops"), price: 0, unit: "Get Quote" },
   { id: "caps", name: "Caps", desc: "Custom embroidered & printed branded caps.", img: "/services/caps.webp", images: gallery("caps"), price: 0, unit: "Get Quote" },
   { id: "keychains", name: "Key Chains", desc: "Custom photo, printed strap & branded keychains.", img: "/services/keychains.webp", images: gallery("keychains"), price: 0, unit: "Get Quote" },
   { id: "id-cards", name: "ID Cards", desc: "Corporate, medical & institutional ID cards with lanyards.", img: "/services/id-cards.webp", images: gallery("id-cards"), price: 0, unit: "Get Quote" },
@@ -164,6 +164,11 @@ export const products: Record<string, Product[]> = {
     P("SS Mirror Letters", 550, "/products/ss-letters/ss-mirror-letter.webp"),
     P("SS Backlit Halo Letters", 850, "/products/ss-letters/ss-backlit-letter.webp"),
     P("SS Mirror Letters (Curved)", 580, "/products/ss-letters/ss-mirror-letter-alt.webp"),
+    P("Gold Mirror Corporate Signage", 950, "/products/ss-letters/ssletters-corporate-signage-steel.webp"),
+    P("Gold Mirror House Name Letters", 780, "/products/ss-letters/ssletters-baliyans-809-gold.webp"),
+    P("Gold Mirror 'Sweet Home' Letters", 650, "/products/ss-letters/ssletters-sweet-home-gold.webp"),
+    P("Gold Mirror Crown Letters", 850, "/products/ss-letters/ssletters-prince-gold-crown.webp"),
+    P("Teal & SS Temple Name Board", 3200, "/products/ss-letters/ssletters-sri-venkateswara-nilayam-teal.webp"),
   ],
   frames: [
     P("Classic Photo Frame", 499, "/products/frames/classic-photo-frame-couple.webp"),
@@ -233,26 +238,25 @@ export const products: Record<string, Product[]> = {
     P("Cricket Championship Trophy", 1899, "/products/customized-mementos/memento-trophy-cricket-championship-wood.webp"),
     P("Anniversary Heart Photo Plaque", 1699, "/products/customized-mementos/memento-heart-anniversary-photo-plaque.webp"),
     P("Winner Congratulations Trophy", 1499, "/products/customized-mementos/memento-trophy-winner-congratulations.webp"),
-    P("Achievement Award Trophy", 1599, "/products/customized-mementos/memento-trophy-achievement-award-wood.webp"),
     P("Football Championship Trophy", 1699, "/products/customized-mementos/memento-trophy-football-championship.webp"),
     P("Best Employee Award Trophy", 1399, "/products/customized-mementos/memento-trophy-best-employee-award.webp"),
+    P("Corporate Excellence Crystal Award", 1899, "/products/customized-mementos/memento-trophy-corporate-excellence.webp"),
+    P("Employee of the Year Crystal Trophy", 1799, "/products/customized-mementos/memento-trophy-employee-of-year.webp"),
+    P("Best Performer Achievement Trophy", 1699, "/products/customized-mementos/memento-trophy-best-performer-star.webp"),
+    P("Appreciation Award - Wood & Gold", 1899, "/products/customized-mementos/memento-trophy-appreciation-wood-gold.webp"),
+    P("Brand Excellence Gold Award", 2199, "/products/customized-mementos/memento-trophy-brand-excellence-gold.webp"),
+    P("Dedicated Service Award - Wood", 1899, "/products/customized-mementos/memento-trophy-dedicated-service-wood.webp"),
+    P("Customer Service Cricket Trophy", 1699, "/products/customized-mementos/memento-trophy-customer-service-cricket.webp"),
   ],
- "table-tops": [
-  P("Memento LED Circle Family Photo Collage", 1999, "/products/table-tops/memento-led-circle-family-photo-collage.webp"),
-
-
-  P("Memento LED Heart Calendar First Date", 1999, "/products/table-tops/memento-led-heart-calendar-first-date.webp"),
-
-  P("Memento LED Heart Love Couple", 1999, "/products/table-tops/memento-led-heart-love-couple.webp"),
-
-  P("Memento LED Holding Hands Couple", 1999, "/products/table-tops/memento-led-holding-hands-couple.webp"),
-
-
-  P("Memento LED Love Story Timeline", 1999, "/products/table-tops/memento-led-love-story-timeline.webp"),
-
-  P("Memento LED Tooth Shape Dentist", 1999, "/products/table-tops/memento-led-tooth-shape-dentist.webp"),
-
-],
+  "table-tops": [
+    P("Memento LED Circle Family Photo Collage", 1999, "/products/table-tops/memento-led-circle-family-photo-collage.webp"),
+    P("Memento LED Heart Calendar First Date", 1999, "/products/table-tops/memento-led-heart-calendar-first-date.webp"),
+    P("Memento LED Heart Love Couple", 1999, "/products/table-tops/memento-led-heart-love-couple.webp"),
+    P("Memento LED Holding Hands Couple", 1999, "/products/table-tops/memento-led-holding-hands-couple.webp"),
+    P("Memento LED Love Story Photo Collage", 1999, "/products/table-tops/memento-led-love-story-photo-collage.webp"),
+    P("Memento LED Love Story Timeline", 1999, "/products/table-tops/memento-led-love-story-timeline.webp"),
+    P("Memento LED Tooth Shape Dentist", 1999, "/products/table-tops/memento-led-tooth-shape-dentist.webp"),
+  ],
   caps: [
     P("Corporate Branded Cap", 299, "/products/caps/cap-branded-blue-creative-department.webp"),
     P("Corporate Branded Cap II", 299, "/products/caps/cap-branded-blue-balloon-station.webp"),
