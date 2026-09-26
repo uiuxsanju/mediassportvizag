@@ -52,6 +52,7 @@ export const services: Service[] = [
   { id: "caps", name: "Caps", desc: "Custom embroidered & printed branded caps.", img: "/services/caps.webp", images: gallery("caps"), price: 0, unit: "Get Quote" },
   { id: "keychains", name: "Key Chains", desc: "Custom photo, printed strap & branded keychains.", img: "/services/keychains.webp", images: gallery("keychains"), price: 0, unit: "Get Quote" },
   { id: "id-cards", name: "ID Cards", desc: "Corporate, medical & institutional ID cards with lanyards.", img: "/services/id-cards.webp", images: gallery("id-cards"), price: 0, unit: "Get Quote" },
+  { id: "3d-letters", name: "3D Letters Name", desc: "Glossy & gold-edge 3D acrylic letters for signage & branding.", img: "/services/3d-letters.webp", images: gallery("3d-letters"), price: 0, unit: "Get Quote" },
 ];
 
 // ─────────────────────────────────────────────────────────────
@@ -83,7 +84,16 @@ export const products: Record<string, Product[]> = {
     P("Backlit Menu Board", 4500, "/products/inshop-branding/inshop-reception.webp"),
     P("Shelf Strips & Danglers", 1500, "/products/inshop-branding/inshop-shelf-strips-danglers.webp"),
     P("Window Vinyl Branding", 2500, "/products/inshop-branding/inshop-wall-graphics.webp"),
-   
+    P("Wall Quote Lettering", 2200, "/products/inshop-branding/inshop-quote-wall-lettering.webp"),
+    P("Cafe Wall Quote Lettering", 1899, "/products/inshop-branding/inshop-cafe-quote-lettering.webp"),
+    P("Cafe Backlit Wall Logo", 4200, "/products/inshop-branding/inshop-cafe-backlit-logo.webp"),
+    P("Textured Wall Logo Panel", 4800, "/products/inshop-branding/inshop-textured-wall-logo.webp"),
+    P("Salon Gold 3D Letters", 3800, "/products/inshop-branding/inshop-salon-gold-letters.webp"),
+    P("Clinic Backlit Gold Logo", 5200, "/products/inshop-branding/inshop-clinic-backlit-gold.webp"),
+    P("Dental Clinic Gold Script Sign", 4500, "/products/inshop-branding/inshop-dental-gold-script.webp"),
+    P("Bakery Backlit Script Sign", 4200, "/products/inshop-branding/inshop-bakery-backlit-script.webp"),
+    P("3D Letters White & Green", 3200, "/products/inshop-branding/inshop-3d-letters-white-green.webp"),
+    P("Backlit Circle Logo Sign", 4800, "/products/inshop-branding/inshop-backlit-circle-logo.webp"),
 ],
 "pvc-letters": [
     P("PVC Cutout Letters", 2500, "/products/pvc-letters/pvc-cutout-letters.webp"),
@@ -225,6 +235,15 @@ export const products: Record<string, Product[]> = {
     P("Superhero Mother Caricature", 1299, "/products/caricature/superhero-mother-caricature.webp"),
     P("Supermom Caricature", 999, "/products/caricature/supermom-caricature.webp"),
     P("Valentine Proposal Caricature", 1499, "/products/caricature/valentine-proposal-caricature.webp"),
+    P("Kid Astronaut Caricature", 1299, "/products/caricature/kid-astronaut-caricature.webp"),
+    P("Wedding Couple Caricature", 1799, "/products/caricature/wedding-couple-caricature.webp"),
+    P("Badminton Player Caricature", 1299, "/products/caricature/badminton-girl-caricature.webp"),
+    P("Graduation Kid Caricature", 1199, "/products/caricature/graduation-kid-caricature.webp"),
+    P("Navy Officer Kid Caricature", 1299, "/products/caricature/navy-officer-kid-caricature.webp"),
+    P("Traditional Couple Caricature", 1799, "/products/caricature/traditional-couple-caricature.webp"),
+    P("Cricket Batsman Kid Caricature", 1299, "/products/caricature/cricket-batsman-kid-caricature.webp"),
+    P("Bharatanatyam Dancer Girl Caricature", 1299, "/products/caricature/bharatanatyam-dancer-girl-caricature.webp"),
+    P("Navy Salute Kid Caricature", 1199, "/products/caricature/navy-salute-kid-caricature.webp"),
   ],
   "name-boards": [
     P("Wooden Honeycomb Name Board", 2500, "/products/name-boards/nameboard-dr-pavitra-honeycomb-wood.webp"),
@@ -232,6 +251,13 @@ export const products: Record<string, Product[]> = {
     P("Gold Ganesh Name Board", 2800, "/products/name-boards/nameboard-dr-srinivasa-rao-ganesh-gold.webp"),
     P("Ganesh Motif Name Board", 2600, "/products/name-boards/nameboard-ganesh-nivas-gold-black.webp"),
     P("Pink Heart Shape Name Board", 2200, "/products/name-boards/nameboard-ishika-homes-pink-heart.webp"),
+    P("LED Backlit Gold Shop Board", 3800, "/products/name-boards/nameboard-royal-jewelry-led-gold.webp"),
+    P("Wooden House Name Board with Plot No.", 2900, "/products/name-boards/nameboard-sharmas-house-wood-plot.webp"),
+    P("Wooden Peacock Feather Name Board", 3100, "/products/name-boards/nameboard-brundavanam-wood-peacock.webp"),
+    P("Peacock Feather Acrylic Name Board", 2400, "/products/name-boards/nameboard-radha-krishna-enclave-green.webp"),
+    P("Gold Frame Glass Name Board", 3300, "/products/name-boards/nameboard-roshan-gold-black.webp"),
+    P("Black & Gold Dome Name Board", 2700, "/products/name-boards/nameboard-fathima-manzil-black-gold.webp"),
+    P("Islamic Calligraphy Acrylic Plaque", 2500, "/products/name-boards/nameboard-islamic-calligraphy-black-gold.webp"),
   ],
   "customized-mementos": [
    
@@ -286,6 +312,15 @@ export const products: Record<string, Product[]> = {
     P("Corporate ID Card - Red", 149, "/products/id-cards/id-card-corporate-red.webp"),
     P("Medical Staff ID Card", 169, "/products/id-cards/id-card-medical-purple.webp"),
     P("Institution ID Card Bundle", 129, "/products/id-cards/id-card-lanyard-bundle-school.webp"),
+  ],
+  "3d-letters": [
+    P("3D Letter S - Glossy Blue", 450, "/products/3d-letters/3dletter-s-glossy-blue.webp"),
+    P("3D Letter S - Red Marquee Bulb", 650, "/products/3d-letters/3dletter-s-red-marquee-bulb.webp"),
+    P("3D Letter U - Red & White", 450, "/products/3d-letters/3dletter-u-red-white.webp"),
+    P("3D Letter G - Green & White", 450, "/products/3d-letters/3dletter-g-green-white.webp"),
+    P("3D Letter N - Gold & White", 480, "/products/3d-letters/3dletter-n-gold-white.webp"),
+    P("3D Letter A - Orange Gold Edge", 480, "/products/3d-letters/3dletter-a-orange-gold.webp"),
+    P("3D Letter M - Blue Gold Edge", 480, "/products/3d-letters/3dletter-m-blue-gold.webp"),
   ],
 };
 
