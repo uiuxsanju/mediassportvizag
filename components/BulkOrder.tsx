@@ -1,6 +1,5 @@
 "use client";
-import { MessageCircle, Package } from "lucide-react";
-import { enquiryWhatsAppLink } from "@/lib/enquiry-client";
+import { Package } from "lucide-react";
 import { useEnquiry } from "@/lib/enquiry";
 
 export default function BulkOrder() {
@@ -30,14 +29,6 @@ export default function BulkOrder() {
             >
               Send Enquiry
             </button>
-            <a
-              href={enquiryWhatsAppLink({ product: "a bulk order" })}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#25D366] font-heading font-bold px-8 py-3 hover:bg-[#25D366] hover:text-white transition"
-            >
-              <MessageCircle size={17} /> Enquire on WhatsApp
-            </a>
           </div>
         </div>
       </div>

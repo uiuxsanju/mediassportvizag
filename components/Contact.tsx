@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle2, Loader2 } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, Loader2 } from "lucide-react";
 import SectionHead from "./SectionHead";
 import { PHONE, waLink } from "@/lib/data";
-import { enquiryWhatsAppLink, normalizeMobile, submitEnquiry } from "@/lib/enquiry-client";
+import { normalizeMobile, submitEnquiry } from "@/lib/enquiry-client";
 
 const info = [
   { icon: MapPin, t: "Address", d: "MEDIASPOT – Day and night hospital road, Rama Talkies Rd, Srinagar, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016" },
@@ -17,7 +17,6 @@ export default function Contact() {
   const [state, setState] = useState<"idle" | "sending" | "done" | "fallback">("idle");
   const [err, setErr] = useState("");
 
-  const waHref = enquiryWhatsAppLink({ product: f.service, name: f.name, message: f.msg });
 
   const valid = () => {
     if (f.name.trim().length < 2 || !normalizeMobile(f.phone)) {
@@ -37,7 +36,7 @@ export default function Contact() {
       product: f.service,
       category: "Contact form",
       message: f.msg.trim(),
-      contactMethod: "WhatsApp",
+      contactMethod: "Phone Call",
     });
     setState(r.ok ? "done" : "fallback");
   };
@@ -88,7 +87,7 @@ export default function Contact() {
                 value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} />
             </div>
             <div>
-              <label htmlFor="phone" className="font-semibold text-sm">Phone / WhatsApp *</label>
+              <label htmlFor="phone" className="font-semibold text-sm">Mobile Number *</label>
               <input id="phone" type="tel" className={inputCls} placeholder="+91 …"
                 value={f.phone} onChange={(e) => setF({ ...f, phone: e.target.value })} />
             </div>
@@ -116,18 +115,13 @@ export default function Contact() {
               <>
                 {state === "fallback" && (
                   <p role="alert" className="rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm p-4">
-                    We couldn&apos;t submit your enquiry online right now. Please send it on WhatsApp instead.
+                    We couldn&apos;t submit your enquiry online right now. Please call us on +91 91339 10782.
                   </p>
                 )}
                 <button type="button" onClick={submit} disabled={state === "sending"}
                   className="inline-flex items-center justify-center gap-2 bg-brand text-black font-heading font-bold py-3.5 rounded-full hover:bg-black hover:text-brand transition disabled:opacity-60">
                   {state === "sending" ? <><Loader2 size={16} className="animate-spin" /> Submitting…</> : <><Send size={16} /> Send Enquiry</>}
                 </button>
-                <a href={waHref} target="_blank" rel="noopener noreferrer"
-                  onClick={(e) => { if (!valid()) e.preventDefault(); }}
-                  className="inline-flex items-center justify-center gap-2 border-2 border-[#25D366] text-[#128C4A] font-heading font-bold py-3 rounded-full hover:bg-[#25D366] hover:text-white transition">
-                  <MessageCircle size={16} /> Enquire on WhatsApp
-                </a>
               </>
             )}
           </div>

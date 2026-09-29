@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { X, MessageCircle, Check } from "lucide-react";
+import { X, Check } from "lucide-react";
 import type { Product, Service } from "@/lib/data";
 import {
   CUSTOMIZATION_OPTIONS,
@@ -10,7 +10,7 @@ import {
   productBlurb,
 } from "@/lib/catalog-meta";
 import { enquiryWhatsAppLink } from "@/lib/enquiry-client";
-import { useEnquiry } from "@/lib/enquiry";
+import WhatsAppIcon from "./WhatsAppIcon";
 import { BadgePill, CardImage, FeatureChips } from "./CardParts";
 
 export default function ProductDetailModal({
@@ -22,7 +22,6 @@ export default function ProductDetailModal({
   category: Service;
   onClose: () => void;
 }) {
-  const { openEnquiry } = useEnquiry();
   const dialogRef = useRef<HTMLDivElement>(null);
   const open = !!product;
 
@@ -49,12 +48,6 @@ export default function ProductDetailModal({
 
   const options = categoryOptions(category.id);
   const badge = productBadge(product);
-  const price =
-    product.price > 0
-      ? `Starting from ₹${product.price.toLocaleString("en-IN")}`
-      : category.price > 0
-      ? category.unit.replace(/^from/i, "Starting from")
-      : "Price on enquiry";
 
   return (
     <div
@@ -132,7 +125,7 @@ export default function ProductDetailModal({
           <dl className="grid grid-cols-2 gap-3 rounded-2xl bg-neutral-50 p-4 text-sm">
             <div>
               <dt className="text-neutral-500 text-xs">Pricing</dt>
-              <dd className="font-bold mt-0.5">{price}</dd>
+              <dd className="font-bold mt-0.5">Price on enquiry</dd>
             </div>
             <div>
               <dt className="text-neutral-500 text-xs">Quantity</dt>
@@ -140,21 +133,14 @@ export default function ProductDetailModal({
             </div>
           </dl>
 
-          <div className="grid sm:grid-cols-2 gap-3">
-            <button
-              type="button"
-              onClick={() => openEnquiry({ product: product.name, category: category.name })}
-              className="rounded-full bg-black text-brand font-heading font-bold py-3.5 hover:bg-brand hover:text-black transition"
-            >
-              Send Enquiry
-            </button>
+          <div className="grid">
             <a
               href={enquiryWhatsAppLink({ product: product.name })}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#128C4A] font-heading font-bold py-3 hover:bg-[#25D366] hover:text-white transition"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand text-black font-heading font-bold text-[15px] px-8 py-3.5 shadow-sm hover:bg-black hover:text-brand transition"
             >
-              <MessageCircle size={17} /> Enquire on WhatsApp
+              <WhatsAppIcon size={19} /> Enquire on WhatsApp
             </a>
           </div>
         </div>

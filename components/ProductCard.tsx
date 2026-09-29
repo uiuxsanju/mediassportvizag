@@ -1,8 +1,8 @@
 "use client";
 import type { Product, Service } from "@/lib/data";
-import { categoryFeatures, productBadge, productBlurb } from "@/lib/catalog-meta";
+import { categoryFeatures, productBadge } from "@/lib/catalog-meta";
 import { useEnquiry } from "@/lib/enquiry";
-import { BadgePill, CardImage, FeatureChips, WishButton, primaryBtn, secondaryBtn } from "./CardParts";
+import { BadgePill, CardImage, FeatureChips, WishButton, cardShell, secondaryBtn } from "./CardParts";
 
 export const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
@@ -15,13 +15,13 @@ export default function ProductCard({
   category: Service;
   onView: () => void;
 }) {
-  const { openEnquiry, isWished, toggleWish } = useEnquiry();
+  const { isWished, toggleWish } = useEnquiry();
   const key = `${category.id}-${slugify(p.name)}`;
   const badge = productBadge(p);
 
   return (
-    <article className="group flex flex-col bg-white rounded-3xl border border-black/[0.06] shadow-soft overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lift focus-within:shadow-lift">
-      <div className="relative aspect-square bg-neutral-50 overflow-hidden">
+    <article className={cardShell}>
+      <div className="relative m-2.5 mb-0 aspect-square rounded-[18px] bg-white ring-1 ring-black/[0.05] overflow-hidden">
         {badge && <BadgePill badge={badge} />}
         <WishButton active={isWished(key)} onToggle={() => toggleWish(key)} label={p.name} />
         <button
@@ -31,26 +31,20 @@ export default function ProductCard({
           aria-hidden="true"
           className="absolute inset-0 w-full h-full cursor-pointer"
         >
-          <CardImage src={p.img || category.img} alt="" />
+          <CardImage src={p.img || category.img} alt="" fit="contain" />
         </button>
       </div>
 
-      <div className="flex flex-col flex-1 p-5">
-        <h3 className="font-heading font-bold text-[1rem] leading-snug min-h-[2.6em]">{p.name}</h3>
-        <p className="mt-1.5 text-sm text-neutral-500 line-clamp-2 min-h-[2.6em]">{productBlurb(p, category)}</p>
-        <FeatureChips keys={categoryFeatures(category.id)} className="mt-3" />
+      <div className="flex flex-col flex-1 px-5 pt-4 pb-5">
+        <h3 className="font-heading font-bold text-[1rem] leading-snug line-clamp-2">{p.name}</h3>
+        <FeatureChips keys={categoryFeatures(category.id)} className="mt-3" max={2} />
 
-        <div className="mt-auto pt-5 flex gap-2">
-          <button
-            type="button"
-            className={primaryBtn}
-            onClick={() => openEnquiry({ product: p.name, category: category.name })}
-          >
-            Send Enquiry
-          </button>
-          <button type="button" className={secondaryBtn} onClick={onView}>
-            View Details
-          </button>
+        <div className="mt-auto pt-4">
+          <div className="border-t border-black/[0.06] pt-4 flex gap-2">
+            <button type="button" className={`${secondaryBtn} w-full`} onClick={onView}>
+              View Details
+            </button>
+          </div>
         </div>
       </div>
     </article>

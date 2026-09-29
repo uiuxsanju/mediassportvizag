@@ -1,11 +1,10 @@
 "use client";
 import { useEffect, useId, useRef, useState } from "react";
-import { X, CheckCircle2, Loader2, MessageCircle, AlertTriangle } from "lucide-react";
+import { X, CheckCircle2, Loader2, AlertTriangle, Phone } from "lucide-react";
+import { PHONE } from "@/lib/data";
 import { services } from "@/lib/data";
 import {
-  CONTACT_METHODS,
   ContactMethod,
-  enquiryWhatsAppLink,
   normalizeMobile,
   submitEnquiry,
 } from "@/lib/enquiry-client";
@@ -37,7 +36,7 @@ const emptyForm = (product: string): Form => ({
   product,
   quantity: "",
   message: "",
-  contactMethod: "WhatsApp",
+  contactMethod: "Phone Call",
   website: "",
 });
 
@@ -151,12 +150,6 @@ export default function EnquiryModal({
     } else setStatus("fallback");
   };
 
-  const waHref = enquiryWhatsAppLink({
-    product: form.product,
-    name: form.name,
-    quantity: form.quantity,
-    message: form.message,
-  });
 
   return (
     <div
@@ -211,16 +204,14 @@ export default function EnquiryModal({
                 <AlertTriangle size={18} className="shrink-0 mt-0.5" />
                 <div className="grid gap-2">
                   <p>
-                    We couldn&apos;t submit your enquiry online right now. Please send it on WhatsApp — your
-                    details are already filled in.
+                    We couldn&apos;t submit your enquiry online right now. Please call us and we&apos;ll
+                    take your enquiry directly.
                   </p>
                   <a
-                    href={waHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex w-fit items-center gap-2 bg-[#25D366] text-white font-semibold px-4 py-2 rounded-full hover:brightness-110 transition"
+                    href={`tel:+${PHONE}`}
+                    className="inline-flex w-fit items-center gap-2 bg-black text-brand font-semibold px-4 py-2 rounded-full hover:bg-brand hover:text-black transition"
                   >
-                    <MessageCircle size={16} /> Enquire on WhatsApp
+                    <Phone size={16} /> Call +91 91339 10782
                   </a>
                 </div>
               </div>
@@ -362,32 +353,6 @@ export default function EnquiryModal({
               />
             </div>
 
-            <fieldset>
-              <legend className="font-semibold text-sm">Preferred Contact Method</legend>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {CONTACT_METHODS.map((m) => (
-                  <label
-                    key={m}
-                    className={`cursor-pointer select-none rounded-full border px-4 py-2 text-sm font-semibold transition focus-within:ring-4 focus-within:ring-brand/40 ${
-                      form.contactMethod === m
-                        ? "bg-black text-brand border-black"
-                        : "bg-white border-black/15 hover:border-black"
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name={id("method")}
-                      value={m}
-                      checked={form.contactMethod === m}
-                      onChange={() => set("contactMethod", m)}
-                      className="sr-only"
-                    />
-                    {m}
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-
             {/* Honeypot — hidden from people, bots fill it */}
             <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
               <label>
@@ -415,14 +380,6 @@ export default function EnquiryModal({
                   "Submit Enquiry"
                 )}
               </button>
-              <a
-                href={waHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#25D366] text-[#128C4A] font-heading font-bold py-3 rounded-full hover:bg-[#25D366] hover:text-white transition"
-              >
-                <MessageCircle size={17} /> Enquire on WhatsApp
-              </a>
               <button
                 type="button"
                 onClick={onClose}
