@@ -42,16 +42,16 @@ export const services: Service[] = [
   { id: "vehicle-wraps", name: "Vehicle Wrapping", desc: "Custom vinyl wraps for vans, trucks & fleet vehicles.", img: "/services/vehicle-wraps.webp", images: gallery("vehicle-wraps"), price: 4999, unit: "from ₹4,999" },
   { id: "road-show-vehicles", name: "Road Show Vehicle Branding", desc: "Full branding for promotional & road show vehicles.", img: "/services/road-show-vehicles.webp", images: gallery("road-show-vehicles"), price: 0, unit: "Get Quote" },
   { id: "flex-printing", name: "Flex Printing", desc: "High-quality flex printing for banners & hoardings.", img: "/services/flex-printing.webp", images: gallery("flex-printing"), price: 0, unit: "Get Quote" },
-  { id: "laser-cnc-cutting", name: "Laser & CNC Cutting", desc: "Precision laser & CNC cutting for signage components.", img: "/services/laser-cnc-cutting.webp", images: gallery("laser-cnc-cutting"), price: 0, unit: "Get Quote" },
   { id: "rollup-standee", name: "Roll-Up Standee", desc: "Portable roll-up standees for events & promotions.", img: "/services/rollup-standee.webp", images: gallery("rollup-standee"), price: 0, unit: "Get Quote" },
-  { id: "customized-gifts", name: "Customized Gifts", desc: "Personalized corporate & festival gifting solutions.", img: "/services/customized-gifts.webp", images: gallery("customized-gifts"), price: 0, unit: "Get Quote" },
   { id: "arch-gates", name: "Arch Gates", desc: "Decorative arch gates for events & inaugurations.", img: "/services/arch-gates.webp", images: gallery("arch-gates"), price: 0, unit: "Get Quote" },
-  { id: "caps", name: "Caps", desc: "Custom embroidered & printed branded caps.", img: "/services/caps.webp", images: gallery("caps"), price: 0, unit: "Get Quote" },
-  { id: "keychains", name: "Key Chains", desc: "Custom photo, printed strap & branded keychains.", img: "/services/keychains.webp", images: gallery("keychains"), price: 0, unit: "Get Quote" },
   { id: "id-cards", name: "ID Cards", desc: "Corporate, medical & institutional ID cards with lanyards.", img: "/services/id-cards.webp", images: gallery("id-cards"), price: 0, unit: "Get Quote" },
   { id: "frames", name: "Photo Frames", desc: "Customized photo frames for gifts & décor.", img: "/services/frames.webp", images: gallery("frames"), price: 499, unit: "from ₹499" },
-  { id: "photo-mug", name: "Photo Mug", desc: "Personalized photo mugs — perfect for gifting.", img: "/services/photo-mug.webp", images: gallery("photo-mug"), price: 0, unit: "Get Quote" },
   { id: "exhibition-signage", name: "Exhibition & Event Signage", desc: "Complete signage solutions for exhibitions & events.", img: "/services/exhibition-signage.webp", images: gallery("exhibition-signage"), price: 0, unit: "Get Quote" },
+  { id: "customized-gifts", name: "Customized Gifts", desc: "Personalized corporate & festival gifting solutions.", img: "/services/customized-gifts.webp", images: gallery("customized-gifts"), price: 0, unit: "Get Quote" },
+  { id: "caps", name: "Caps", desc: "Custom embroidered & printed branded caps.", img: "/services/caps.webp", images: gallery("caps"), price: 0, unit: "Get Quote" },
+  { id: "keychains", name: "Key Chains", desc: "Custom photo, printed strap & branded keychains.", img: "/services/keychains.webp", images: gallery("keychains"), price: 0, unit: "Get Quote" },
+  { id: "photo-mug", name: "Photo Mug", desc: "Personalized photo mugs — perfect for gifting.", img: "/services/photo-mug.webp", images: gallery("photo-mug"), price: 0, unit: "Get Quote" },
+  { id: "laser-cnc-cutting", name: "Laser & CNC Cutting", desc: "Precision laser & CNC cutting for signage components.", img: "/services/laser-cnc-cutting.webp", images: gallery("laser-cnc-cutting"), price: 0, unit: "Get Quote" },
 ];
 
 // ─────────────────────────────────────────────────────────────
