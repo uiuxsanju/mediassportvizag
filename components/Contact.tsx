@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, Loader2 } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import SectionHead from "./SectionHead";
-import { PHONE, waLink } from "@/lib/data";
-import { normalizeMobile, submitEnquiry } from "@/lib/enquiry-client";
+import { waLink } from "@/lib/data";
+import { normalizeMobile } from "@/lib/enquiry-client";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const info = [
   { icon: MapPin, t: "Address", d: "MEDIASPOT – Day and night hospital road, Rama Talkies Rd, Srinagar, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016" },
@@ -14,7 +15,6 @@ const info = [
 
 export default function Contact() {
   const [f, setF] = useState({ name: "", phone: "", service: "Sign Board", msg: "" });
-  const [state, setState] = useState<"idle" | "sending" | "done" | "fallback">("idle");
   const [err, setErr] = useState("");
 
 
@@ -27,18 +27,14 @@ export default function Contact() {
     return true;
   };
 
-  const submit = async () => {
-    if (state === "sending" || !valid()) return;
-    setState("sending");
-    const r = await submitEnquiry({
-      name: f.name.trim(),
-      mobile: normalizeMobile(f.phone),
-      product: f.service,
-      category: "Contact form",
-      message: f.msg.trim(),
-      contactMethod: "Phone Call",
-    });
-    setState(r.ok ? "done" : "fallback");
+  const submit = () => {
+    if (!valid()) return;
+    const text = `Hi, I am interested in ${f.service}.
+Name: ${f.name.trim()}
+Mobile: ${normalizeMobile(f.phone)}
+Requirement: ${f.msg.trim() || "-"}
+Please share the details and quotation.`;
+    window.open(waLink(text), "_blank", "noopener,noreferrer");
   };
 
   const inputCls = "w-full mt-1.5 px-4 py-3 rounded-xl border border-black/10 text-sm focus:outline-none focus:border-brand focus:ring-4 focus:ring-brand/25";
@@ -106,24 +102,10 @@ export default function Contact() {
                 value={f.msg} onChange={(e) => setF({ ...f, msg: e.target.value })} />
             </div>
             {err && <p role="alert" className="text-sm text-red-600 -mb-1">{err}</p>}
-            {state === "done" ? (
-              <p role="status" className="flex items-start gap-2 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm p-4">
-                <CheckCircle2 size={18} className="shrink-0 mt-0.5" />
-                Thank you! Your enquiry has been submitted. Our team will contact you shortly.
-              </p>
-            ) : (
-              <>
-                {state === "fallback" && (
-                  <p role="alert" className="rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm p-4">
-                    We couldn&apos;t submit your enquiry online right now. Please call us on +91 91339 10782.
-                  </p>
-                )}
-                <button type="button" onClick={submit} disabled={state === "sending"}
-                  className="inline-flex items-center justify-center gap-2 bg-brand text-black font-heading font-bold py-3.5 rounded-full hover:bg-black hover:text-brand transition disabled:opacity-60">
-                  {state === "sending" ? <><Loader2 size={16} className="animate-spin" /> Submitting…</> : <><Send size={16} /> Send Enquiry</>}
-                </button>
-              </>
-            )}
+            <button type="button" onClick={submit}
+              className="inline-flex items-center justify-center gap-2 bg-brand text-black font-heading font-bold py-3.5 rounded-full hover:bg-black hover:text-brand transition">
+              <WhatsAppIcon size={19} /> Enquire on WhatsApp
+            </button>
           </div>
         </div>
       </div>

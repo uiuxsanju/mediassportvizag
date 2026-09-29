@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { Menu, X, Send, Phone } from "lucide-react";
-import { useEnquiry } from "@/lib/enquiry";
+import { Menu, X, Phone } from "lucide-react";
 import { PHONE } from "@/lib/data";
 import SearchBar from "./SearchBar";
 
@@ -14,7 +13,6 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const { openEnquiry } = useEnquiry();
 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 bg-white shadow-soft h-[72px]">
@@ -49,10 +47,6 @@ export default function Navbar() {
           <a href={`tel:+${PHONE}`} className="hidden sm:flex items-center gap-2 bg-black text-brand font-heading font-bold text-sm px-4 py-2.5 rounded-full hover:bg-hoverink transition">
             <Phone size={15} /> Call Now
           </a>
-          <button onClick={() => openEnquiry()} aria-label="Send enquiry"
-            className="flex items-center gap-2 h-11 px-4 sm:px-5 rounded-full bg-black text-brand font-heading font-bold text-sm hover:bg-brand hover:text-black ring-1 ring-black transition">
-            <Send size={16} /> <span className="hidden sm:inline">Enquiry</span>
-          </button>
           <button className="lg:hidden w-11 h-11 rounded-full bg-brand grid place-items-center" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>

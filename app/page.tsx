@@ -11,7 +11,6 @@ import CtaBanner from "@/components/CtaBanner";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
-import BulkOrder from "@/components/BulkOrder";
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
       <Hero />
       <Stats />
       <Services />
-      <BulkOrder />
       <WhyUs />
       <Process />
       <Testimonials />

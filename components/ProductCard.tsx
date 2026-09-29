@@ -1,8 +1,8 @@
 "use client";
 import type { Product, Service } from "@/lib/data";
-import { categoryFeatures, productBadge } from "@/lib/catalog-meta";
+import { productBadge } from "@/lib/catalog-meta";
 import { useEnquiry } from "@/lib/enquiry";
-import { BadgePill, CardImage, FeatureChips, WishButton, cardShell, secondaryBtn } from "./CardParts";
+import { BadgePill, CardImage, WishButton, cardShell } from "./CardParts";
 
 export const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
@@ -20,33 +20,24 @@ export default function ProductCard({
   const badge = productBadge(p);
 
   return (
-    <article className={cardShell}>
-      <div className="relative m-2.5 mb-0 aspect-square rounded-[18px] bg-white ring-1 ring-black/[0.05] overflow-hidden">
+    <article className={`${cardShell} relative`}>
+      <div className="pointer-events-none absolute inset-x-2.5 top-2.5 h-16 z-10 [&>*]:pointer-events-auto">
         {badge && <BadgePill badge={badge} />}
         <WishButton active={isWished(key)} onToggle={() => toggleWish(key)} label={p.name} />
-        <button
-          type="button"
-          onClick={onView}
-          tabIndex={-1}
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full cursor-pointer"
-        >
-          <CardImage src={p.img || category.img} alt="" fit="contain" />
-        </button>
       </div>
-
-      <div className="flex flex-col flex-1 px-5 pt-4 pb-5">
-        <h3 className="font-heading font-bold text-[1rem] leading-snug line-clamp-2">{p.name}</h3>
-        <FeatureChips keys={categoryFeatures(category.id)} className="mt-3" max={2} />
-
-        <div className="mt-auto pt-4">
-          <div className="border-t border-black/[0.06] pt-4 flex gap-2">
-            <button type="button" className={`${secondaryBtn} w-full`} onClick={onView}>
-              View Details
-            </button>
+      <button
+        type="button"
+        onClick={onView}
+        aria-label={`View ${p.name} details`}
+        className="flex flex-col flex-1 text-left rounded-[24px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"
+      >
+        <div className="relative w-full aspect-square">
+          <div className="absolute inset-2.5 bottom-0 rounded-[18px] bg-white ring-1 ring-black/[0.05] overflow-hidden">
+            <CardImage src={p.img || category.img} alt="" fit="contain" />
           </div>
         </div>
-      </div>
+        <h3 className="px-5 pt-4 pb-5 font-heading font-bold text-[1rem] leading-snug line-clamp-2">{p.name}</h3>
+      </button>
     </article>
   );
 }
