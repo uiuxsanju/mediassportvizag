@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
-import { CartProvider } from "@/lib/cart";
+import { EnquiryProvider } from "@/lib/enquiry";
 import IntroSplash from "@/components/IntroSplash";
 
 const poppins = Poppins({
@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} ${inter.variable}`}>
         <IntroSplash />
-        <CartProvider>{children}</CartProvider>
+        <EnquiryProvider>{children}</EnquiryProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

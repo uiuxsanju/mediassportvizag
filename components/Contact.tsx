@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle2, Loader2 } from "lucide-react";
 import SectionHead from "./SectionHead";
 import { PHONE, waLink } from "@/lib/data";
+import { enquiryWhatsAppLink, normalizeMobile, submitEnquiry } from "@/lib/enquiry-client";
 
 const info = [
   { icon: MapPin, t: "Address", d: "MEDIASPOT – Day and night hospital road, Rama Talkies Rd, Srinagar, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016" },
@@ -13,14 +14,32 @@ const info = [
 
 export default function Contact() {
   const [f, setF] = useState({ name: "", phone: "", service: "Sign Board", msg: "" });
+  const [state, setState] = useState<"idle" | "sending" | "done" | "fallback">("idle");
+  const [err, setErr] = useState("");
 
-  const send = () => {
-    if (!f.name.trim() || !f.phone.trim()) {
-      alert("Please enter your name and phone number.");
-      return;
+  const waHref = enquiryWhatsAppLink({ product: f.service, name: f.name, message: f.msg });
+
+  const valid = () => {
+    if (f.name.trim().length < 2 || !normalizeMobile(f.phone)) {
+      setErr("Please enter your name and a valid 10-digit mobile number.");
+      return false;
     }
-    const msg = `Hi MEDIASPOT! 👋\n\n*Name:* ${f.name}\n*Phone:* ${f.phone}\n*Service:* ${f.service}\n*Message:* ${f.msg || "—"}`;
-    window.open(waLink(msg), "_blank");
+    setErr("");
+    return true;
+  };
+
+  const submit = async () => {
+    if (state === "sending" || !valid()) return;
+    setState("sending");
+    const r = await submitEnquiry({
+      name: f.name.trim(),
+      mobile: normalizeMobile(f.phone),
+      product: f.service,
+      category: "Contact form",
+      message: f.msg.trim(),
+      contactMethod: "WhatsApp",
+    });
+    setState(r.ok ? "done" : "fallback");
   };
 
   const inputCls = "w-full mt-1.5 px-4 py-3 rounded-xl border border-black/10 text-sm focus:outline-none focus:border-brand focus:ring-4 focus:ring-brand/25";
@@ -87,11 +106,30 @@ export default function Contact() {
               <textarea id="msg" rows={4} className={inputCls} placeholder="Tell us about your requirement…"
                 value={f.msg} onChange={(e) => setF({ ...f, msg: e.target.value })} />
             </div>
-            <button onClick={send}
-              className="inline-flex items-center justify-center gap-2 bg-brand text-black font-heading font-bold py-3.5 rounded-full hover:bg-black hover:text-brand transition">
-              <Send size={16} /> Send via WhatsApp
-            </button>
-            <p className="text-xs text-neutral-400 -mt-2">Opens WhatsApp with your details pre-filled — nothing is stored on the site.</p>
+            {err && <p role="alert" className="text-sm text-red-600 -mb-1">{err}</p>}
+            {state === "done" ? (
+              <p role="status" className="flex items-start gap-2 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm p-4">
+                <CheckCircle2 size={18} className="shrink-0 mt-0.5" />
+                Thank you! Your enquiry has been submitted. Our team will contact you shortly.
+              </p>
+            ) : (
+              <>
+                {state === "fallback" && (
+                  <p role="alert" className="rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm p-4">
+                    We couldn&apos;t submit your enquiry online right now. Please send it on WhatsApp instead.
+                  </p>
+                )}
+                <button type="button" onClick={submit} disabled={state === "sending"}
+                  className="inline-flex items-center justify-center gap-2 bg-brand text-black font-heading font-bold py-3.5 rounded-full hover:bg-black hover:text-brand transition disabled:opacity-60">
+                  {state === "sending" ? <><Loader2 size={16} className="animate-spin" /> Submitting…</> : <><Send size={16} /> Send Enquiry</>}
+                </button>
+                <a href={waHref} target="_blank" rel="noopener noreferrer"
+                  onClick={(e) => { if (!valid()) e.preventDefault(); }}
+                  className="inline-flex items-center justify-center gap-2 border-2 border-[#25D366] text-[#128C4A] font-heading font-bold py-3 rounded-full hover:bg-[#25D366] hover:text-white transition">
+                  <MessageCircle size={16} /> Enquire on WhatsApp
+                </a>
+              </>
+            )}
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ import CtaBanner from "@/components/CtaBanner";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
-import CartDrawer from "@/components/CartDrawer";
+import BulkOrder from "@/components/BulkOrder";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Services />
+      <BulkOrder />
       <WhyUs />
       <Process />
       <Testimonials />
@@ -29,7 +30,6 @@ export default function Home() {
       <Contact />
       <Footer />
       <FloatingButtons />
-      <CartDrawer />
     </main>
   );
 }

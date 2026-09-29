@@ -1,7 +1,10 @@
-import { Phone, MessageCircle } from "lucide-react";
+"use client";
+import { Phone, MessageCircle, Send } from "lucide-react";
+import { useEnquiry } from "@/lib/enquiry";
 import { PHONE, waLink } from "@/lib/data";
 
 export default function CtaBanner() {
+  const { openEnquiry } = useEnquiry();
   return (
     <section className="bg-black text-center pt-20 pb-20 relative overflow-hidden">
       <div className="absolute -top-20 right-0 w-72 h-72 rounded-full bg-brand blur-[100px] opacity-25" />
@@ -10,7 +13,11 @@ export default function CtaBanner() {
           Need Branding for Your Business?<br />Let&apos;s Build Your Brand Together.
         </h2>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href={`tel:+${PHONE}`} className="inline-flex items-center gap-2 bg-brand text-black font-heading font-bold px-7 py-3.5 rounded-full hover:bg-white transition">
+          <button type="button" onClick={() => openEnquiry()}
+            className="inline-flex items-center gap-2 bg-brand text-black font-heading font-bold px-7 py-3.5 rounded-full hover:bg-white transition">
+            <Send size={16} /> Send Enquiry
+          </button>
+          <a href={`tel:+${PHONE}`} className="inline-flex items-center gap-2 border-2 border-white/40 text-white font-heading font-bold px-7 py-3.5 rounded-full hover:bg-white hover:text-black transition">
             <Phone size={16} /> Call Now
           </a>
           <a href={waLink("Hi MEDIASPOT! I need branding for my business.")} target="_blank" rel="noopener noreferrer"
