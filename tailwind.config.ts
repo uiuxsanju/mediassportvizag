@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         heading: ["var(--font-poppins)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],
+        cond: ["var(--font-roboto-condensed)", "'Roboto Condensed'", "sans-serif"],
       },
       boxShadow: {
         soft: "0 4px 14px rgba(0,0,0,.07)",

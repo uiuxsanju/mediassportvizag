@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Poppins, Inter, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import { EnquiryProvider } from "@/lib/enquiry";
 import IntroSplash from "@/components/IntroSplash";
@@ -10,6 +10,11 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const robotoCondensed = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-roboto-condensed",
+});
 
 export const metadata: Metadata = {
   title: "MEDIASPOT – Advertising Hub | Sign Boards, Branding & Corporate Gifts",
@@ -30,7 +35,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${inter.variable}`}>
+      <body className={`${poppins.variable} ${inter.variable} ${robotoCondensed.variable}`}>
         <IntroSplash />
         <EnquiryProvider>{children}</EnquiryProvider>
         <script
