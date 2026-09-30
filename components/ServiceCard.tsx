@@ -3,28 +3,24 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Service } from "@/lib/data";
 import { categoryFeatures, categoryMeta } from "@/lib/catalog-meta";
-import { useEnquiry } from "@/lib/enquiry";
-import { BadgePill, CardImage, FeatureChips, WishButton, cardShell, secondaryBtn } from "./CardParts";
+import { BadgePill, CardImage, FeatureChips, cardShell, secondaryBtn } from "./CardParts";
 
 export default function ServiceCard({ s, priority = false }: { s: Service; priority?: boolean }) {
-  const { isWished, toggleWish } = useEnquiry();
   const badge = categoryMeta(s.id).badge;
-  const key = `svc-${s.id}`;
   const href = `/services/${s.id}`;
 
   return (
     <article className={cardShell}>
       <div className="relative m-2.5 mb-0 aspect-[4/3] rounded-[18px] bg-white ring-1 ring-black/[0.05] overflow-hidden">
         {badge && <BadgePill badge={badge} />}
-        <WishButton active={isWished(key)} onToggle={() => toggleWish(key)} label={s.name} />
         <Link href={href} tabIndex={-1} aria-hidden="true" className="absolute inset-0">
           <CardImage src={s.img} alt="" fit="contain" priority={priority} />
                   </Link>
       </div>
 
       <div className="flex flex-col flex-1 px-5 pt-4 pb-5">
-        <h3 className="font-body font-medium text-[15px] text-neutral-800 leading-snug">
-          <Link href={href} className="flex items-start justify-between gap-3">
+        <h3 className="text-center font-body font-medium text-[13px] text-neutral-800 leading-snug">
+          <Link href={href} className="flex items-start justify-center gap-2">
             <span className="line-clamp-2">{s.name}</span>
             <ArrowUpRight
               size={18}
@@ -33,7 +29,7 @@ export default function ServiceCard({ s, priority = false }: { s: Service; prior
             />
           </Link>
         </h3>
-        <FeatureChips keys={categoryFeatures(s.id)} className="mt-3" max={2} />
+        <FeatureChips keys={categoryFeatures(s.id)} className="mt-3 justify-center" max={2} />
 
         <div className="mt-auto pt-4">
           <div className="border-t border-black/[0.06] pt-4 flex gap-2">
