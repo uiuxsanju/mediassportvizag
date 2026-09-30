@@ -36,7 +36,7 @@ export default function ProductCard({
             <CardImage src={p.img || category.img} alt="" fit="contain" />
           </div>
         </div>
-        <h3 className="px-5 pt-4 pb-5 font-cond font-medium text-[1.1rem] text-neutral-800 leading-snug line-clamp-2">{p.name}</h3>
+        <h3 className="px-5 pt-4 pb-5 font-body font-medium text-[15px] text-neutral-800 leading-snug line-clamp-2">{p.name}</h3>
       </button>
     </article>
   );

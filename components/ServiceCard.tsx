@@ -23,7 +23,7 @@ export default function ServiceCard({ s, priority = false }: { s: Service; prior
       </div>
 
       <div className="flex flex-col flex-1 px-5 pt-4 pb-5">
-        <h3 className="font-cond font-medium text-[1.15rem] text-neutral-800 leading-snug">
+        <h3 className="font-body font-medium text-[15px] text-neutral-800 leading-snug">
           <Link href={href} className="flex items-start justify-between gap-3">
             <span className="line-clamp-2">{s.name}</span>
             <ArrowUpRight
