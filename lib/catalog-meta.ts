@@ -16,7 +16,7 @@ export type FeatureKey =
 
 export const FEATURE_LABEL: Record<FeatureKey, string> = {
   custom: "Custom Design",
-  quality: "Premium Quality",
+  quality: "Premium",
   delivery: "PAN India Delivery",
   size: "Custom Sizes",
   bulk: "Bulk Orders",
@@ -49,8 +49,6 @@ const META: Record<string, Meta> = {
   clocks: { features: ["custom", "gift", "delivery"], options: ["Wall", "Wooden", "Tabletop"], blurb: "Custom clock printed with your photo, logo or design." },
   "vehicle-wraps": { features: ["custom", "durable", "size"] },
   "road-show-vehicles": { features: ["custom", "size", "quality"] },
-  "flex-printing": { features: ["size", "durable", "bulk"] },
-  "laser-cnc-cutting": { features: ["quality", "custom", "size"] },
   "rollup-standee": { features: ["custom", "quality", "delivery"] },
   "arch-gates": { features: ["custom", "size", "quality"] },
   "id-cards": { badge: "Bulk Order", features: ["bulk", "custom", "quality"], options: ["Corporate", "Medical", "Institutional (with lanyards)"] },
@@ -58,7 +56,7 @@ const META: Record<string, Meta> = {
   "exhibition-signage": { features: ["size", "custom", "quality"] },
   "customized-gifts": { badge: "Bulk Order", features: ["custom", "gift", "bulk"] },
   caps: { badge: "Bulk Order", features: ["custom", "bulk", "quality"], options: ["Embroidered", "Printed"] },
-  keychains: { badge: "Bulk Order", features: ["custom", "bulk", "gift"], options: ["Photo", "Printed strap", "Branded"] },
+  keychains: { badge: "Bulk Order", features: ["custom", "bulk", "gift"], options: ["Photo", "Printed Strap", "Acrylic"] },
   "photo-mug": { badge: "Bulk Order", features: ["custom", "gift", "bulk"] },
 };
 
